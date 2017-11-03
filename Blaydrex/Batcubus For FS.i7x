@@ -37,7 +37,7 @@ to say beatthebatcubus:
 			if cunt width of player < 3 or cunt length of player < 6:
 				say "     Your eyes hone in on her perfect breasts. You can see small trails of milk leaking from her large nipples. You smirk as a nice thought comes to your mind. You want something to fill your cunt and womb, might as well try milk. You walk up to her and roughly grab her breast. She looks surprised, obviously not used to someone being so rough and forceful.Her milk leaks out more rapidly as a sign of her growing arousal. You push her breast against your cunt, her nipple and some breast going inside. You smile and squeeze, making her milk flood into your cunt. You whimper, your pussy drinking up all that delicious milk. After you finish emptying one breast you move to the next, until that one empties as well. You pop it free, milk pouring from your cunt. She smiles, something made her happy. She kisses your abdomen where your womb is. Your uterus feels strange and your body heats up. You drop to your knees as your pussy tightens, no more milk escaping from it. You go through an intense orgasm that lasts a while. When you come down you see some more milk leaking out, but not much. But something seems off. It is thicker and looks more like cum. Her kiss must have changed the milk to sperm.[impregchance]";
 			else:
-				say "    Your eyes remain glued to her lovely lips covered with her purple lipstick. Something about them makes you just want to kiss them. She smiles and waits patiently for you to close in before kissing you passionately on the lips, making you more horny. You stand up and place your pussy near her lips. She kisses your pussy and clit lovingly before licking with passion. Her technique is incredible, quickly bringing you to the edge. You can't help but cum, covering her face in your juices. She waits a second and begins her assault again. Your sensitive pussy is even more sensitive, causing you to moan like a little whore. She makes you cum countless times before you drop out of exhaustion. She gets up and walks away, leaving you oddly more horny than when you started.";
+				say "     Your eyes remain glued to her lovely lips covered with her purple lipstick. Something about them makes you just want to kiss them. She smiles and waits patiently for you to close in before kissing you passionately on the lips, making you more horny. You stand up and place your pussy near her lips. She kisses your pussy and clit lovingly before licking with passion. Her technique is incredible, quickly bringing you to the edge. You can't help but cum, covering her face in your juices. She waits a second and begins her assault again. Your sensitive pussy is even more sensitive, causing you to moan like a little whore. She makes you cum countless times before you drop out of exhaustion. She gets up and walks away, leaving you oddly more horny than when you started.";
 		else:
 			say "     The scent of her arousal is enticing, even to your genderless body.  You lick your lips and eye her sopping wet crotch hungrily.  She spreads her legs a little further and smiles enticingly.  You head over to her and bury your face in between her legs.  Grabbing her thighs, you raise her legs up and apart while diving your tongue into her dripping cunny.  You lap up her flowing juices as she pants and moans like a horny slut in a porno film.";
 			say "     You eat her out through several messy orgasms, sometimes lapping up her juices while other times fingering her frantically through her climax.  Despite your neutered state, you feel a rush of sexual delight at each of these.  And while a little muted and unfocused, it still feels good.  Eventually, you feel sated and manage to pull yourself away from her.  The bat creature gets up with a happy grin, stretches and strides off.";
@@ -48,7 +48,7 @@ to say beatthebatcubus:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -57,12 +57,12 @@ When Play begins:
 	now name entry is "Batcubus"; [Name of your new Monster]
 	now attack entry is "[one of]She grabs your groin roughly with her gloved hand while giggling.[or]She slaps you hard on the face, leaving a red mark of a hand.[or]The batcubus knocks you down and places the heel of her purple boot hard on your chest, blowing a kiss before jumping away, giggling.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatthebatcubus]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Batcubus attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is "[Batcubus attack]"; [ Text used when monster wins, can be directly entered like combat text or description. Or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 4]     An anthropomorphic bat, but she seems different than a normal bat. Her lips are coated in a purple lipstick, which obviously contains a powerful aphrodisiac judging by the smell. Her breasts are rather large, JJ cups it looks like. Her torso appears to be covered by some red corset, but that is obviously just fur when you spot a drop of milk come out from her nipple. Her arms are in elegant white gloves that go almost all the way to her shoulders. Her legs are covered in purple high heel boots that cover them completely. Her fur is snow white. Her face and head is that of a bat's with its upturned nose and triangular ears. She simply smiles at you, licking her lips as she saunters over to you, obviously wanting to kiss you.";[ Description of the creature when you encounter it.]
 	now face entry is "that of a female bat. It is beautiful and elegant, and your lips are covered with purple lipstick that is sweet when you lick it";[ Face description, format as the text 'Your face is (your text)']
 	now body entry is "slender and elegant. Your torso looks like it is covered with a red corset, but it is actually fur";[ Body Description, format as the text 'Your Body is (your text)']
 	now skin entry is "white furred";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "that of a bat. It is really cute.";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "Your ass is that of a bat. It is really cute.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "pteropine";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "you feel something weird on your lips. You lick them just to find they taste sweet and your mouth and groin quickly fill with lust-filled warmth. They are coated in the batcubus's purple lipstick. You can't help but lick your lips over and over, each lick making you more and more horny and advances your transformation further. Your face pulls forward into a bat muzzle and your ears extend into triangles and pulled to the top of your head. You soon finish your transformation, with your face resembling that of a beautiful bat. You lick your lips once again."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your body begins to slender out, becoming beautiful and elegant. Your hands are covered in white gloves. Your legs end up covered in purple high-heeled boots that go all the way up your legs. A strange red fur covers your torso, making it look like you are wearing a red corset, even though you are actually naked."; [ body change text. format as "Your body feels funny as (your text)" ]
@@ -76,8 +76,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Female";          [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 49;                 [ How many HP has the monster got? ]
-	now lev entry is 6;                 [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 49;                 [ How many HP has the monster got? ]
+	now lev entry is 6;                 [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 6;               [ Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse";        [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -87,8 +87,8 @@ When Play begins:
 	now breast size entry is 16;        [ Size of breasts infection will try to attain ]
 	now male breast size entry is 16;   [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;        [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 7;          [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 12;        [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 7;          [ Width of female sex infection will try and give you ]
 	now libido entry is 80;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "batcubus milk";  [ Loot monster drops, ]
 	now lootchance entry is 75;         [ Chance of loot dropping 0-100 ]
@@ -102,7 +102,7 @@ When Play begins:
 	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
-Section 3 - Drop Item 
+Section 3 - Drop Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -128,9 +128,9 @@ When play ends:
 			say "You search the city looking for males to impregnate you and anybody to kiss, your cunt always dripping, ready to be fucked at any time. Sometimes thoughts of your past return, but a single lick of your lips quickly sends your lust soaring and you can't help but forget again and go look for relief you so desperately need.";
 		else:
 			say "Life as a batcubus proves fun. Every time you find someone you enjoy all you have to do is kiss them and they are putty in your hands. Thanks to this you have a good life, letting you have everything you want, never needing to work a day in your life";
-			if cocks of player is greater than 0 and cunts of player is greater than 0:
+			if cocks of player > 0 and cunts of player > 0:
 				say "You spend your days fighting the urge to lick your lips. Being one gender or the other would allow you to instinctively lick them safely, but the combined lust of your female and male sex organs would be too much. A single lick could send you into a sexual fury. Last time it happened you tried to turn a whole town into batcubuses. Hopefully one day someone can find out how to get this lipstick off you.";
-			else if cocks of player is greater than 0:
+			else if cocks of player > 0:
 				say "You find that having a cock isn't as fun as having a slavering cunt like most other batcubuses, but you make do. Your cock is insatiable, no matter how much you cum and fuck. One day you find a tigress hooker, who takes an interest in you. Shi wastes no time in raping you and dominating you until you submit to hir. Shi claims you as hir own and shi is actually able to keep up with your sex drive, so it works out. You spend the rest of your days happily mated to hir.";
 			else:
 				say "...";

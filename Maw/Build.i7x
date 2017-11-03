@@ -38,7 +38,7 @@ Carry out constructing:
 		now facing of blueprints is second noun;
 		now blueprints is started;
 		say "Your builders begin constructing [noun].";
-	otherwise:
+	else:
 		say "Aborted.";
 
 
@@ -59,13 +59,13 @@ Definition: A Construct (called C) is valid:
 	follow the validation of C;
 	if rule succeeded:
 		yes;
-	otherwise:
+	else:
 		no;
 
 Definition: A Construct (called C) is complete:
 	if progress of C >= cost of C:
 		yes;
-	otherwise:
+	else:
 		no;
 
 
@@ -108,7 +108,7 @@ This is the Ranch Output Rule:
 		increase x by 1;
 	if "Meat" is listed in diet of tribe of player:
 		increase food of tribe of player by x;
-	otherwise:
+	else:
 		increase creds of tribe of player by x;
 
 This is the ranchcheck rule:
@@ -131,7 +131,7 @@ This is the Agri Output Rule:
 	now x is x + ( workers of farmer / 20 );
 	if "Plant" is listed in diet of tribe of player:
 		increase food of tribe of player by x;
-	otherwise:
+	else:
 		increase creds of tribe of player by x;
 
 This is the agricheck rule:
@@ -155,7 +155,7 @@ This is the well rule:
 		now x is x + ( workers of farmer / 20 );
 	if "Plant" is listed in diet of tribe of player:
 		increase food of tribe of player by x;
-	otherwise:
+	else:
 		increase creds of tribe of player by x;
 
 Section - Shelter
@@ -184,8 +184,8 @@ An everyturn rule(this is the Can We Build It rule):
 	if "Deft" is listed in perks of tribe of player:
 		increase x by 20;
 	now x is ( x * foragers ) / 100;
-	if x is greater than 0: [ There is building to be done ]
-		if x is less than 1, now x is 1;
+	if x > 0: [ There is building to be done ]
+		if x < 1, now x is 1;
 		say "Your construction advances: +[x]";
 		increase progress of building of blueprints by x;
 		if building of blueprints is complete:

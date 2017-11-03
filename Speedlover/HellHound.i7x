@@ -11,7 +11,7 @@ to say OvergrownBlockDesc:
 		say "     At this time of night it's far too dark to make out much of the unlit, overgrown area.";
 		if houndfromhell is true and isHellhound is false:
 			say "[meetHellhound]";
-		if hellHoundLevel is greater than 1:
+		if hellHoundLevel > 1:
 			say "[returntoHellhound]";
 	else: [day]
 		say "     Tucked away behind the sheds is a vacant area. Looks like at one point, another shed stood here, but was torn down. It's mostly nondescript, though with all the wild, woody bushes and overlong grass, you probably wouldn't be able to see anything if it WAS here. There are several patches of dead grass, spots where it has just withered and formed a dead circle... Weird.";
@@ -28,9 +28,78 @@ houndfromhell is a truth state that Varies. houndfromhell is usually false.
 
 to say beachrapetoggle:
 	now beachrape is True;
+<<<<<<< HEAD:Speedlover/HellHound.i7x
 	
 Section 2 - Hellhound
 	
+=======
+
+part 3.2 - Notice Board
+
+Table of board entries
+entry text	entry trigger
+"The Church would like to issue a warning to all roaming the district at night. Strange flickering green light has been seen behind the sheds north of the beach. It is advised no one visit this area."	"[hellhoundtoggle]"
+
+Instead of examining the Notice Board:
+	say "     Covering the notice board are many scraps of paper, most worse for wear. But at the same time most seem relatively new. Huh? Guess paper is a tad hard to come by. Most of them seem to be personal ads. Should those be on a church notice board?![line break]Anyways, here are a few that catch your attention.[line break]";
+	repeat through Table of board entries:
+		say "[line break][entry text entry][entry trigger entry]";
+
+part 3.3 - Confession Booth
+
+lastconfession is a number that varies. lastconfession is 248.
+
+This is the church description rule:
+	say "     As you ask about the church, you hear a friendly little laugh from the other side of the booth. 'Indeed! That truly is the question we are asked most!' you sense the priestess smiling even though you cannot see her.";
+	say "     'This is the place of the Great Mother, the Church of the Maternal Beast. Following her will, we have re-purposed this place to try and help those who suffer under the weight of the infection that runs rampant in the city. We try to offer peace and comfort, and to help other learn that while overwhelming, it does not need to control you.'";
+	wait for any key;
+	clear the screen;
+	rule succeeds;
+
+this is the lustconfession rule:
+	say "     You hear a soft sigh. 'Indeed, you speak of one of the most dangerous aspects of the infection, for it leads towards loosing yourself. Please just listen, and I will attempt to help you overcome its controlling nature.'";
+	if ( lastconfession - 7 ) > turns:
+		say "     The priestess's words and advice do indeed help, granting you better control over your lusts, at least for now.";
+		Decrease libido of player by 20;
+		if libido of player < 0, now libido of player is 0;
+		now lastconfession is turns;
+	else:
+		say "     Unburdening yourself again, you sadly discover it has little effect as you had nothing to add since your last confession session.";
+	wait for any key;
+	clear the screen;
+	rule succeeds;
+
+this is the leaveconfession Rule:
+	say "You mumble a soft goodbye and thank-you, then leave the confessional stepping back out into the church.";
+	wait for any key;
+	decrease the menu depth by 1;
+
+Table of confession entries
+title	subtable	description	toggle
+"What is this place?"	--	""	church description rule
+"Confess about the sexual need that tries to overwhelm you."	--	""	lustconfession rule
+"Leave the confessional."	--	""	leaveconfession Rule
+--	--	--	--  [extra line for adding the demon brute cleansing question]
+
+instead of examining the confession booth:
+	Say "     It's quiet and nondescript, perhaps you should try to [bold type][link]enter[as]enter confession[end link][roman type] it and confess, or just talk to whomever is inside?";
+
+instead of sniffing the confession booth:
+	say "It smells faintly of incense and arousal from the various creatures who have been within it.";
+
+instead of entering the Confession Booth:
+	enterConfessional;
+
+to enterConfessional:
+	say "     As you close the door of the booth and kneel the best you can, a voice speaks slowly. It is warm, comforting, and unmistakably female. 'Welcome my child, you may not know but we do not follow the Christian tradition here. We simply are making use of what they left in place. Please feel free to ask questions, and if you have any troubles weighing heavily on your mind, please voice them. I will do my best to put your mind and spirit at ease.'";
+	wait for any key;
+	change the current menu to Table of confession entries;
+	carry out the displaying activity;
+	clear the screen;
+
+Part 3.4 - Hellhound
+
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b:Guest Writers/Church of the Maternal Beast for FS.i7x
 to say hellhoundtoggle:
 	now houndfromhell is true;
 
@@ -98,8 +167,14 @@ to Hellhound infect female:
 	say "     As you choke on the stench of sulfur, the beast takes the opportunity to press its muzzle against your lips, its tongue delving in. Your body spasms as it exhales... something intangible... yet somehow also fills your mouth completely. The strange yellow cloud flows down your throat, entering your lungs and your stomach. It soaks through your flesh and worms its way up into your mind, causing an agonising pain that suddenly just... stops.";
 	say "     The hellhound steps off you, taking a few steps back as you cough and splutter shaking your head as everything starts to... brighten? The shadows of the block no longer seem to hide anything. The stench is gone to as well as the urge to throw up. You look at your benefactor and can see the glint of your own eyes glowing yellow reflected in his. He just pants happily, pleased with his handiwork, dragging a slimy tongue over your cheek before beginning to tug clothing. He pushes with his paws and large head, maneuvering you onto your hands and knees so that he can continue his work. You no longer have any intention or ability to object, even if you had intended to originally. Even as you hear the tearing of fabric and cool air wash between your legs as he rips out the crotch of your pants deftly and moves to cover you, you accept it and wait. The canine's dirty fur drags against your cloths and his wet, piss-soaked sheath jerks and rubs over your exposed sex.";
 	say "     'Give yourself to me, bitch. Seal your fate as one of my children and sluts.' You shiver as he pants hotly in your ear, mockingly issuing the order. And even as your mind babbles that you can't really mean to give into the demonic being, you feel your hips twitch back, your cunt lips spreading and pushing the beast's sheath back. The dirty, foul length starting to enter your passage.";
+<<<<<<< HEAD:Speedlover/HellHound.i7x
 	say "     'Stop' he orders, grasping your hips with his forelimbs and panting happily. A soft grunt then a happy whine heard from the infernal canine and then a flood of hot, liquid foulness starts to run down into you. The demon dog's paws shifting and pushing on your shoulders, making you lower your chest into the ground as his piss flows into you. Burning horribly, destroying your mortal flesh and leaving an unholy taint as he as he lets out a hiss of pleasure. 'Oh YESSSSSS!' His head tilts back, tongue lolling out of his muzzle and you feel a strange tightness start to form around your neck, growing firmer the longer you submit to this infernal hound. You don't get a chance to determine what it is however before the beast snarls and drives his cock home. His foul urine gushing out from around his cock, soaking your legs and forcing you to kneel in the growing puddle even as you feel his cock engorge and swell, filling your sex completely. With a final howl, he grinds his shaft into your cunt, rubbing the bunched up sheath against your cunt lips. With the length spasming inside you, you get a single rush of unimaginable, painful heat before blacking out.";
 	WaitLineBreak;
+=======
+	say "     'Stop!' he orders, grasping your hips with his forelimbs and panting happily. A soft grunt then a happy whine heard from the infernal canine and then a flood of hot, liquid foulness starts to run down into you. The demon dog's paws shifting and pushing on your shoulders, making you lower your chest into the ground as his piss flows into you. Burning horribly, destroying your mortal flesh and leaving an unholy taint as he as he lets out a hiss of pleasure. 'Oh YESSSSSS!' His head tilts back, tongue lolling out of his muzzle and you feel a strange tightness start to form around your neck, growing firmer the longer you submit to this infernal hound. You don't get a chance to determine what it is however before the beast snarls and drives his cock home. His foul urine gushing out from around his cock, soaking your legs and forcing you to kneel in the growing puddle even as you feel his cock engorge and swell, filling your sex completely. With a final howl, he grinds his shaft into your cunt, rubbing the bunched up sheath against your cunt lips. With the length spasming inside you, you get a single rush of unimaginable, painful heat before blacking out.";
+	wait for any key;
+	clear the screen;
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b:Guest Writers/Church of the Maternal Beast for FS.i7x
 	say "     You wake up several hours later with your clothing torn to ribbons and slimy, yellow-tinged seed forming a puddle between your legs. Feeling your neck, there is a seamless leather collar, engraved with strange infernal characters tightly wrapped around it. Somehow you've been brought back to the bunker, and true to the demon dog's words, you no longer show any signs of the infection. You seem to have been completely restored to a human form... except for one place. Between your legs is a lewd dripping demon bitch twat, swollen and puffy, leaking the hellhound's piss and cum as you hear a chuckle in your mind. 'Such a pretty bitch you are. Please, go out and enjoy yourself. You are now immune to the changes, just as I promised, as one of us. You will easily return to the form you want to hold, with one or two things that can't be hidden. Such are the rules, there must always be SOME kind visible proof or our infernal origins. Return to me once you a properly... ready,' the voice says, fading out and leaving you alone with your thoughts in the bunker.";
 	say "     Your insides clench with a fiery heat, longing to have a litter of hellhound pups gestating inside you.";
 	if Humanity of player > 50, now humanity of player is 50;
@@ -135,7 +210,7 @@ to Hellhound infect male:
 	say "     After a few moments, you take her in earnest, pushing your cock right up in, feeling her tense then howl. Her sex spasming as her cum and her piss mix with your as you feel the unnatural canine lock around your knot. From nowhere you feel your own climax building, and a tightness around your neck start to constrict. Before you can move a hand to check what the tightness is, the hell bitch howls and jerks, leaning up and burying her fangs into your neck as you let out a startled howl of climax as well. Everything blurs in a haze of pain and pleasure before you black out as your knot swells and ties inside the fel hound.";
 	WaitLineBreak;
 	say "     You wake up several hours later, your clothing torn to ribbons. Feeling your neck, there is a seamless leather collar, engraved with strange infernal characters tightly wrapped around it. Somehow you've been brought back to the bunker, and true to the demon-dog's words, you no longer show any signs of the infection. You seem to have been completely restored to a human form... except for one place. Glancing down, you have the dirty and fouled hellhound shaft from the night before, dried up cum peeling from your skin and making the fur clump together. As you try and take this development in, you hear a chuckle in your mind 'Mmmmmmm, that WAS an enjoyable night, puppy. But you're not quite up to the task yet. You are not ready to be a male in my pack. Return to me once you have a little more... experience,' the voice fades away, leaving you alone with your thoughts in the bunker.";
-	say "     An unholy urge fills you as rub at yourself through your pants. Females, bitches -  you need to fill them with your seed.";
+	say "     An unholy urge fills you as rub at yourself through your pants. Females, bitches - you need to fill them with your seed.";
 	if Humanity of player > 50, now humanity of player is 50;
 	now skin of player is "smooth";
 	now face of player is "leather dog collar around your neck, and a charmingly human";
@@ -178,8 +253,13 @@ to say returntoHellhound:
 			say "     'Stay, mutt! You're not done with her yet.' The bitches bark enthusiastically and the two that are free bound over to nuzzle and press against the newcomer. 'Oh, so you approve of the new male, girls? Good! It's time we took him home then. He's got a lot of bitches to serve after all.'";
 			say "     The clawed hand grabs your collar and effortlessly lifts you, making the bitch and yourself yelp in pain and shock as the tie is pulled on. After a few seconds, the bitch lets out a whuff, and from around your knot the fel bitch's piss gushes, soaking your crotch and seeping up to your belly fur as it runs down your thighs. Your sheath is continually flushed out by her urine as you feel the tightness around your knot fade as she seems to get looser and looser before finally popping free.";
 			say "     You are then hoisted fully to your feet and allowed to gain your footing, though you are still kept from turning around.";
+<<<<<<< HEAD:Speedlover/HellHound.i7x
 			if waiterhater is 0, WaitLineBreak; [skips waiting if it's not wanted]
 			end the game saying "Your soul is consumed by your hellish lusts.";
+=======
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			end the story saying "Your soul is consumed by your hellish lusts.";
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b:Guest Writers/Church of the Maternal Beast for FS.i7x
 		else:	[if the player is female.]
 			say "     Stepping over the line and causing the watching hound to grin at you, his tongue lolling out of his muzzle and he prods his pack mates to get their attention. 'Our bitch is finally here.' You shiver at the words... but the slimy mess running down your leg makes it clear no matter what you think you want, your body craves exactly what they want to do to you. As you approach, they casually get to their feet, stretching and yawning, smirking at you as they pad over, then start to circle around. After a few seconds of study, they grab and tear at your clothes, growling happily as they expose your dirty, furred body. One of them drags his tongue over your tailhole while another presses his hot, dry nose against your oozing, lewd, hellhound twat and inhales your scent before dragging his tongue across the swollen, leaking opening.";
 			say "     The sensations from all this make you groan and shudder, dropping onto all fours as you feel your sex throb. The third hellhound, the one who initially corrupted you, snickers at your expression. He rolls onto his back, hind legs spread with the tip of his foul length poking from his sheath and oozing yellow cream into his belly fur. 'Come, bitch, it's time to accept your new place.'";
@@ -191,8 +271,13 @@ to say returntoHellhound:
 			say "     After several blissful minutes with the infernal dogs['] cocks throbbing and oozing into your body, a crunching of grass can be heard. As you groggily lift your head, your vision is filled with a hoof - jet black with a blood red [']sock[']. Your mind seems to be running slowly. This should mean something to you, but you can't quite...";
 			say "     'Hurry up, you mutts. It is time we returned.' You feel a jerk on your collar, lifting your head up, startling a whine from your muzzle as the two engorged knots buried inside pull painfully. 'Enough, flood the bitch and let us be gone!'";
 			say "     You can't make yourself look at the demon. His voice alone make your ears flatten against your skull and fills you with the urge to slink to him on your belly in submission, but your four-legged lovers back happily at his instructions then grunt softly. Their piss begins to gush into you, both dogs whining happily as they empty themselves inside you. The tainted and foul liquid causes your muscles to relax as the clawed hand pulls at your collar, drawing you up until both dog cocks pop free with a fetid gush of cum and piss. This flow washes back down onto both hounds, running down your legs and staining your fur.";
+<<<<<<< HEAD:Speedlover/HellHound.i7x
 			if waiterhater is 0, WaitLineBreak; [skips waiting if it's not wanted]
 			end the game saying "Your soul is consumed by your hellish lusts.";
+=======
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			end the story saying "Your soul is consumed by your hellish lusts.";
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b:Guest Writers/Church of the Maternal Beast for FS.i7x
 	else:
 		say "     Shuddering, you manage and turn and walk away despite the unholy urge to join the hellhounds in the clearing.";
 		move the player to Dirty Sheds;
@@ -269,7 +354,7 @@ every turn (This is the check Hellhound rule):
 				now the breast size of the player is 2;
 			if libido of player < 90, now libido of player is 90;
 		else if humanity of the player > 15:	[Bipedal Hellhound]
-			if hellHoundLevel  < 2:
+			if hellHoundLevel < 2:
 				now hellHoundLevel is 2;
 				say "     As you surrender your humanity, the hellhound's [']gift['] starts to manifest as the curse it truly is. Your mind starts to embrace the perverted and foul nature that the infernal mutt inflicted upon you. A soft chuckle echoes through your mind and, in your backpack, your journal turns to dust.";
 				say "     You also get an unsettling urge to return to where you first encountered the infernal hound.";
@@ -328,7 +413,7 @@ every turn (This is the check Hellhound rule):
 				now the breasts of the player is 8;
 				now the breast size of the player is 4;
 		else: [quad Hell Doggy ^.^]
-			if hellHoundLevel  < 3:
+			if hellHoundLevel < 3:
 				now hellHoundLevel is 3;
 				say "     You surrender completely, abandoning your humanity and embracing your infernal nature. Nothing matters to you any more besides pleasure and breeding, spawning as many of your kind as possible.";
 				delete journal;
@@ -413,7 +498,7 @@ lastchurchattempt is a number that varies. lastchurchattempt is normally 248.
 instead of going north from the Beach Plaza while hellhoundlevel > 0:
 	if churchenter is 0:
 		say "     You move to enter the church, but you find it increasingly difficult to move closer to it as you approach. Stubbornly, you try to advance, but are filled with increasing pain as you press onwards. Eventually, you reach a point where the pain is unbearable and you aren't moving a centimeter closer despite pushing with all your might. Exhausted and frustrated, you howl like a beast and leap back. Clearly something, or someone, is preventing you from entering this holy place. Perhaps you should try again later to enter.";
-		now hp of player is hp of player / 3;
+		now HP of player is HP of player / 3;
 		now churchenter is 1;
 	else if lastchurchattempt - turns < 8 or churchenter is 2 and daytimer is night:
 		say "     You try to advance into the church, but are again met with great resistance. You push against it, hoping it will fail, but stop when you can sense no weakness from it. You don't want to pointlessly hurt yourself again. You growl angrily at the church doors and step away.";
@@ -421,8 +506,13 @@ instead of going north from the Beach Plaza while hellhoundlevel > 0:
 		say "     As you growl in frustration, trying to fight your way to the steps of the church, the doors open and the Priestess is there. She is an angelic figure with white wings and a beautiful, human face. Her ears are those of a rabbit, but with golden fur like her long, flowing hair. She has a feline tail, also golden, emerging from her loose robes. Her body has silvery, scaled skin that starts below her neck, covering her slender arms as well as her taloned hands. Her feet are fluffy rabbit's feet. It takes you a moment to notice that they're not touching the ground, instead hovering lightly over the marble steps. There is a faint glow all about her, yellow and blue, as if the air surrounding her is radiant with energy.";
 		say "     'You are not permitted here,' she says, her voice booming with strength. 'You received warning and you disregarded it. You were offered an opportunity to leave and you did not take it. You chose to accept the foul beast's dark gift of your own free will. Your taint is your own made manifest. This house will not welcome one such as you into it.'";
 		say "     And with those words, you are pushed steadily away from the church as the glow around her increases. You are driven back, howling in pain. You curse and snap at her, covering your eyes against her radiant light. It is warm and giving and accepting, while your heart is tainted with coldness, selfishness and fear. You cannot stand before it and slink away. Once you reach the far edge of the plaza, the angelic mutant floats back effortlessly and the church doors slam shut of their own accord with a resounding, stern BOOM!";
+<<<<<<< HEAD:Speedlover/HellHound.i7x
 		now hp of player is hp of player / 3;
 		if waiterhater is 0, WaitLineBreak; [skips waiting if it's not wanted]
+=======
+		now HP of player is HP of player / 3;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b:Guest Writers/Church of the Maternal Beast for FS.i7x
 		say "     Waiting at the steps down to the beach, you see the hellhound, growling at the doors of the church. 'Do not let it fool you as it has many others. The mortal is deluded; their power is from the infection and nothing more.' Part of you wants to accept that the priestess is something more, something greater, but your tainted heart wants to believe the hellhound's words. 'It treats us poorly. Bars us from that place. Something should be done about it,' he says is a soft, insidious growl to you.";
 		say "     You find yourself agreeing with the hellhound, wanting that fool and its painful light to be extinguished. You are free now to do as you wish and it bars your way. You are strong, yet it hurt you and it should pay for that. A seething, unreasoning hatred of that church and its priestess well up in you.";
 		say "(Continuation not yet written)";
@@ -459,13 +549,13 @@ When play ends:
 		else if mousecurse is 1:											[chosen by the mouse-collective]
 			say "     As your mind fades, more and more of your infernal taint comes to the fore, hands becoming paws, face stretching out into a muzzle, coarse dirty fur spreading all over your body. But then Rachel is there, holding you tightly in her small arms, somehow her weak arms able to hold back the powerful force of your infernal pact. As your mate clutches to you, you can feel her mind pushing against that dark power. Soon you can feel somewhere above her mind, greater than it, the collective hive-mind of all the mice, focused on this. Your body starts changing again, becoming more mouse-like this time until you are fully a mouse like your loving mate and the other mice of the collective, though of the same gender as you were before. The darkness fades as the bond of the dark pact is shattered by their mental might, freeing you to become fully one of them instead.";
 			say "[fullmousification]";
-		else if hp of the player is greater than 0:
+		else if HP of the player > 0:
 			follow the check hellhound rule;
 			if maleHound is true:
-				if humanity of the player is less than 1:
+				if humanity of the player < 1:
 					say "     As your mind fades, more and more of your infernal taint comes to the fore, hands becoming paws, face stretching out into a muzzle, coarse dirty fur spreading all over your body. Eventually, you're so far gone that you start to couple with common animals without hesitation, and it's when you are tied in a feral mutt you discovered wandering the streets that a green, flickering glow appears behind you.";
 					say "     The rough grip on your collar startles you enough to let out a surprised yelp, but the huge, clawed, red hand rubs your ears. 'Easy, mutt! It's just time to go home, that is all. You've had enough fun in the mortal realm.' You let out a disappointed whine, bones melting and reforming as your body alters further to suit your mindless nature. Now you are nothing more than a mindless hellhound, incapable of reasoned thought or speech, unlike the beast that initially corrupted you. 'Come, boy! There's a gate for you to help guard and bitches to breed. If you're good, I may let you out to play with the mortals again someday.'";[Rutting beast, loyal demon, or resisting mortal.]
-				else if humanity of player is less than 33:
+				else if humanity of player < 33:
 					say "     Suddenly, the air in front of you shimmers, giving off a sickly yellow light. A single point seems to hang there for a few moments before it begins to - well, the only word you can use to describe what happens is the air seems to [']tear[']. Furnace-like heat hits you in the face from the black, lightless void. The edges of the ever-growing hole are rimmed in luminescent yellow. Every now and again, a drop seems to fall to the ground from the edge of the growing portal, hissing and leaving a scorch mark.";
 					say "     'Time to go home, BITCH!' you hear from behind you before being shoved into the blackened void of the hellgate. As you start to plummet, you let out a startled scream. The darkness is so complete, you cannot even see yourself as the impossible heat steals the air from your lungs. After a few moments, you sink into an unconsciousness as black as your surroundings.";
 					say "     Groggily, you feel yourself come to and there is a soft, metallic chink as you shift. Opening your eyes, you find heavy, iron manacles wrapped around your wrists. A similar weight on your ankles tell you those are also restrained. Around you stand hundreds of infernal hounds. The demonic dogs pant quietly, some licking their chops, some letting out soft eager growls and all of them showing some signs of arousal. As they begin to close in, you let out a shiver at the perverse hunger in all of the bitches' eyes. You know they will keep you rutting from now until eternity, only allowed to rest while collapsed on their backs, your member twitching and pulsing within.";
@@ -473,10 +563,10 @@ When play ends:
 				else: [Male Tainted Human]
 					say "Your demonic [']luck['] holds and, as the whole city dissolves in chaos, you manage to escape. Weeks later, you stumble into an uninfected location, find a job, and try to return to the life you once had. But the longer you go without... indulging yourself, the harder and tighter your hellhound shaft becomes. It's probably only a matter of time before you end up doing your demonic master's bidding... or in escaping, perhaps you already are.";
 			else:
-				if humanity of the player is less than 1:	[Female  animal]
+				if humanity of the player < 1:	[Female animal]
 					say "     As your mind fades, more and more of your infernal taint comes to the fore, hands becoming paws, face stretching out into a muzzle, coarse dirty fur spreading all over your body. Eventually, you're so far gone that you start to couple with common animals without hesitation, and it's when you are tied beneath a feral mutt you discovered wandering the streets that a green, flickering glow appears behind you.";
 					say "     The rough grip on your collar startles you enough to let out a surprised yelp, but the huge, clawed, red hand rubs your ears. 'Easy, bitch! It's just time to go home, that is all. You've had enough fun in the mortal realm.' You let out a disappointed whine, bones melting and reforming as your body alters further to suit your mindless nature. Now you are nothing more than a mindless hellhound, incapable of reasoned thought or speech, unlike the beast that initially corrupted you. 'Come, girl. There's a gate for you to help guard and plenty of males waiting to make sure you remain heavy with pups. If you're good, I may let you out to play with the mortals again someday.'";
-				else if humanity of player is less than 33:	[Female bipedal demon Dog]
+				else if humanity of player < 33:	[Female bipedal demon Dog]
 					say "     Suddenly, the air in front of you shimmers, giving off a sickly yellow light. A single point seems to hang there for a few moments before it begins to - well, the only word you can use to describe what happens is the air seems to [']tear[']. Furnace-like heat hits you in the face from the black, lightless void. The edges of the ever-growing hole are rimmed in luminescent yellow. Every now and again, a drop seems to fall to the ground from the edge of the growing portal, hissing and leaving a scorch mark.";
 					say "     'Time to go home, BITCH!' you hear from behind you before being shoved into the blackened void of the hellgate. As you start to plummet, you let out a startled scream. The darkness is so complete, you cannot even see yourself as the impossible heat steals the air from your lungs. After a few moments, you sink into an unconsciousness as black as your surroundings.";
 					say "     Groggily, you feel yourself come to and there is a soft metallic chink as you shift. Opening your eyes, you find heavy, iron manacles wrapped around your wrists. A similar weight on your ankles tell you those are also restrained. Around you stand hundreds of infernal hounds. The demonic dogs pant quietly, some licking their chops, some letting out soft eager growls and all of them showing some signs of arousal. As they begin to close in, you let out a shiver and run a paw over your belly, knowing it will soon be swollen and heavy with their demonic spawn, doomed to an eternity as a bitch whelping litter after litter.";

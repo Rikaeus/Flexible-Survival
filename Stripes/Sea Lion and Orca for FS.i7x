@@ -9,16 +9,16 @@ to say slaodesc:
 	choose row monster from table of random critters;
 	if hardmode is true and level of player > 4:
 		let debit be level of player - 4;
-		now hp entry is 45 + ( ( debit * 9 ) / 2 );
-		now monsterhp is 45 + ( ( debit * 9 ) / 2 );
+		now HP entry is 45 + ( ( debit * 9 ) / 2 );
+		now monsterHP is 45 + ( ( debit * 9 ) / 2 );
 		now lev entry is 4 + debit;
 		now wdam entry is 5 + ( lev entry / 3 );
 		now dex entry is 17 + ( ( lev entry * 2 ) / 9 );
-	say "     You find yourself facing off against two inflatable sea animals at once, a male sea lion and a female orca. The former is an opaque purple in colour and the latter is a translucent magenta. The sea lion gives a squeezing bark which is answered by a trill from the orca, at which point they both rush you from opposite sides. They are attacking you together, the male striking from the ground and trying to trip up your legs while the female floats in the air, trying to push your body over from the other direction. Either on their own [if level of player > 6]wouldn't be more than an annoyance, but together they're a bit of a hassle[else if level of player > 3]wouldn't be much trouble, but together they're more effective than some of the other inflatables you've seen[otherwise]would be a bit of a hassle, but together they're much more of a threat[end if].";
+	say "     You find yourself facing off against two inflatable sea animals at once, a male sea lion and a female orca. The former is an opaque purple in colour and the latter is a translucent magenta. The sea lion gives a squeezing bark which is answered by a trill from the orca, at which point they both rush you from opposite sides. They are attacking you together, the male striking from the ground and trying to trip up your legs while the female floats in the air, trying to push your body over from the other direction. Either on their own [if level of player > 6]wouldn't be more than an annoyance, but together they're a bit of a hassle[else if level of player > 3]wouldn't be much trouble, but together they're more effective than some of the other inflatables you've seen[else]would be a bit of a hassle, but together they're much more of a threat[end if].";
 
 
 to say losetoslao:
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Not wanting to resist the pair any further, you allow them to press you to the padded floor beneath them.";
 	else:
 		say "     Battered by their soft, but insistent, blows, you are knocked off your feet onto the padded floor. They quickly flop down atop you, pinning you down.";
@@ -38,7 +38,7 @@ to say slaoattack:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -51,7 +51,7 @@ When Play begins:
 	now face entry is "impossible"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "impossible"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "impossible"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is ""; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "impossible"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "it changes in an impossible manner"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "it changes in an impossible manner"; [ Body TF text, format as "Your body feels funny as (your text)." ]
@@ -65,7 +65,7 @@ When Play begins:
 	now int entry is 8;
 	now cha entry is 13;
 	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 45; [ The monster's starting hit points. ]
+	now HP entry is 45; [ The monster's starting HP. ]
 	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6; [ Monster's average damage when attacking. ]
 	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -105,12 +105,12 @@ this is the slaodoubleteam rule:		[struck by both at once for increased dmg]
 	say "Coming at you both at once, the [one of]sea lion[or]purple inflatable[or]plump male[at random] [one of]bumps against one of your legs[or]noses firmly at your groin[or]presses his large body against your legs[or]grabs onto your hips with his flippers and humps your leg with his inflated penis[at random] while the [one of]orca[or]magenta inflatable[or]floating female[at random] [one of]bumps against your shoulder[or]noses firmly at your chest[or]presses her large body against your torso[or]turns quickly and slaps the white underside of her tail into your face[at random]. Being struck by both at once makes it much more difficult for you to stay upright and continue fighting. You take [special-style-2][dam][roman type] damage.";
 	now damagein is dam;
 	say "[normalabsorbancy]";
-	if absorb is greater than dam:
+	if absorb > dam:
 		now absorb is dam;
-	if absorb is greater than 0:
+	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease hp of the player by dam;
-	increase hp of player by absorb;
+	decrease HP of the player by dam;
+	increase HP of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 

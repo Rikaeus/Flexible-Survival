@@ -3,14 +3,23 @@ Version 1 of Beach by Speedlover begins here.
 Section 1 - Basic Setup [of rooms]
 
 [Beach plaza]
+<<<<<<< HEAD
 Beach Plaza is a Room. 
+=======
+Beach Plaza is a Room.
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b
 The Beach Plaza is fasttravel. The Beach Plaza is not known.
 The description of beach plaza is "[BeachplazaDesc]".
 earea of Beach Plaza is "Outside".
 
 to say BeachplazaDesc:
+<<<<<<< HEAD
 	say "     Quite different from the dirty, ill-kempt streets of the city you know, the plaza you are standing upon presents itself in a sunny scene. It is fairly large, open and relatively clean, with a boardwalk extending toward the west. You can see a wooden railing in the distance there, with the sea visible beyond that. Remembering the layout of the beach from previous visits, you know that there is a sharp cliff over there, with stairs leading down to the public beach and the rest of the coastline. To the north is a church, its wide doors open and inviting.";
 	say "      Numerous infected are present on this peaceful plaza, strolling around in a relaxed fashion and checking out various vendor stalls and buildings. Which is a bit surprising, to say the least - given the state of affairs everywhere else. Maybe the towering bronze statue of a crab straddling the street like an archway has something to do with it. You certainly do not remember that being there before all the trouble in the city started.".
+=======
+	say "     Quite different from the dirty, ill-kempt streets of the city you know, the plaza you are standing upon presents itself in a sunny scene. It is fairly large, open and relatively clean, with a boardwalk extending toward the west. You can see a wooden railing in the distance there, with the sea visible beyond that. Remembering the layout of the beach from previous visits, you know that there is a sharp cliff that way, with stairs leading down to the public beach and the rest of the coastline. To the north is a church, its wide doors open and inviting.";
+	say "     Numerous infected are present on this peaceful plaza, strolling around in a relaxed fashion and checking out various vendor stalls and buildings. Which is a bit surprising, to say the least - given the state of affairs everywhere else. Maybe the towering bronze statue of a crab straddling the street like an archway has something to do with it. You certainly do not remember that being there before all the trouble in the city started.".
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b
 
 Beach Exit is a door. Beach Exit is dangerous.
 The marea of Beach Exit is "Outside". Beach Exit is undescribed. Beach Exit is east of Beach Plaza.
@@ -33,7 +42,11 @@ instead of conversing the Bronze Crab:
 instead of fucking the Bronze Crab:
 	say "     Amorous thoughts fill your mind and you step closer to one of the giant crab's legs, to... rub ub against it? Climb on it? Whatever it was, you are stopped cold by a huge pincer, closing around your midsection to hold you firm. With carefully meted-out force (to not accidentally snap you in half), the crab picks you up and sets you down outside the plaza, releasing its grasp there. You hear some clicking noises and see it gesture towards the city, although it doesn't seem to mind that you walk back to the plaza - without trying to have sex with it this time.";
 
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b
 [Boardwalk]
 West of Beach Plaza is Boardwalk2.
 Boardwalk2 is a Room.
@@ -42,7 +55,11 @@ Boardwalk2 is a room with printed name "Boardwalk".
 earea of Boardwalk2 is "Outside".
 
 to say BoardwalkDesc:
+<<<<<<< HEAD
 	say "     The broad boardwalk you are standing on extends for a fair bit, starting at the beach plaza to east of your position and leading to the edge of the beachside cliffs just west of here. A broad wooden railing makes sure no one falls over the edge while they enjoy the view of the open ocean and the beach and coastline at the foot of the cliff. A set of broad stairs lead down to the beach, twisting back and forth as they descend the rock wall. Meanwhile, small stores flank the boardwalk up here, although from what you can see they are almost uniformly closed. Apparently most now house people who are living in them, no doubt fled from the city to this halfway peaceful area.";
+=======
+	say "     The broad boardwalk you are standing on extends for a fair bit, starting at the beach plaza to east of your position and leading to the edge of the beachside cliffs just west of here. A wooden railing makes sure no one falls over the edge while they enjoy the view of the open ocean and the beach and coastline at the foot of the cliff. A set of broad stairs lead down to the beach, twisting back and forth as they descend the rock wall. Meanwhile, small stores flank the boardwalk up here, although from what you can see they are almost uniformly closed. Apparently most now house people who are living in them, no doubt fled from the city to this halfway peaceful area.";
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b
 	say "     There is a decent amount of people of all sorts of species here, either chit-chatting or simply just hanging out by themselves, sitting at one of the many tables of a cafe that is actually still open. Sadly, the long line coming out of the door tells you that you won't be getting an ice-cream cone or other treat anytime soon. Overall, this area is a nice difference from the insanity of the city as everyone here appears to just want to relax.";
 
 instead of sniffing the Boardwalk2:
@@ -143,7 +160,13 @@ instead of sniffing the Rocky Cliff:
 South of Rocky Cliff is BeachEnd.
 The description of BeachEnd is "[BeachEndDesc]".
 BeachEnd is southwest of Public Beach.
+<<<<<<< HEAD
 BeachEnd is a Room.
+=======
+BeachEnd is a room with printed name "End of the Beach".
+BeachEnd is a Room.
+earea of BeachEnd is "Beach".
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b
 
 to say BeachEndDesc:
 	say "     The sand here curves sharply towards the cliff-side, meeting it a little further south, just where the cliff actually ends in the cean. Beyond, the water gets deeper quickly, and numerous craggy rocks stick out of the ocean, constantly trashed by crashing waves. That looks like a rather unhealthy area to get into the water - but wait, at one spot, there is a kind of coral-encrusted arch allowing passage through the rocks. Maybe you could brave the ocean after all and [bold type]swim[roman type] that way? Of course, if you just want to get wet, why not head east instead - inside the bay, the waters are shallow and much calmer. Otherwise, you can head northeast to the public beach or north to the foot of the rocky cliff where it gets much taller and more jagged.";
@@ -154,7 +177,11 @@ instead of sniffing the BeachEnd:
 before going to the Coral Ring:
 	say "     You can't just walk around in the ocean. You'll have to [bold type]swim[roman type] to the [bold type]coral ring[roman type].";
 	stop the action;
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b
 [Coral Ring - *****Swimming is defined in Hellerhounds file - Underwater zone for FS*****]
 Southwest of BeachEnd is Coral Ring.
 Coral Ring is a Room.
@@ -165,7 +192,11 @@ to say CoralRingDesc:
 
 instead of sniffing the Coral Ring:
 	say "All you can smell out here is the strong scent of the ocean.";
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b
 after entering the Coral Ring:
 	say "You look up with awe, sure this accomplishment was great.";
 	increase score by 5;
@@ -192,7 +223,11 @@ the scent of Sunken Ship is "You can't smell anything while underwater.".
 Church Hall is a room. "     The inside of the Church is dim but not dark - relaxing, one could say. It seems all terribly normal, wooden pews filling much of the long hall, a smattering of heads sitting here and there. There's definitely no lack of space. There are some signs that whatever religion is practiced here, it's not anything you recognise. There are no crosses or other recognisable religious symbols. There are several freshly painted motifs however and they all seem to depict some great stylised beast offering protection and shelter to those near it. At the far end of the church, there seems to be a recessed door that, based on the outside of the building, must lead down some stairs.".
 
 North of Beach Plaza is Church Hall.
+<<<<<<< HEAD
 There is a Notice Board in the Church Hall. It is rooted in place.
+=======
+There is a Church Notice Board in the Church Hall. It is rooted in place.
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b
 There is a Confession Booth in the Church Hall. "Standing against one wall, the dark wood of the large confession booth catches the eye. It has been modified to allow even a large creature such of those Panther Taurs to fit inside.". It is Rooted in place.
 The invent of Church Hall is { "nullifying powder" }.
 
@@ -200,7 +235,11 @@ instead of sniffing Church Hall:
 	say "The church smells of incense, arousal and the sea air from outside.";
 
 [Definitions]
+<<<<<<< HEAD
 understand "board" as Notice Board.
+=======
+understand "board" as Church Notice Board.
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b
 understand "beach" as Beach Plaza.
 understand "church" as Beach Plaza.
 
@@ -209,7 +248,11 @@ Table of board entries
 entry text	entry trigger
 "The Church would like to issue a warning to all roaming the district at night. Strange flickering green light has been seen behind the sheds north of the beach. It is advised no one visit this area."	"[hellhoundtoggle]"
 
+<<<<<<< HEAD
 Instead of examining the Notice Board:
+=======
+Instead of examining the Church Notice Board:
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b
 	say "     Covering the notice board are many scraps of paper, most worse for wear. But at the same time most seem relatively new. Huh? Guess paper is a tad hard to come by. Most of them seem to be personal ads. Should those be on a church notice board?![line break]Anyways, here are a few that catch your attention.[line break]";
 	repeat through Table of board entries:
 		say "[line break][entry text entry][entry trigger entry]";
@@ -226,10 +269,17 @@ This is the church description rule:
 
 this is the lustconfession rule:
 	say "     You hear a soft sigh. 'Indeed, you speak of one of the most dangerous aspects of the infection, for it leads towards loosing yourself. Please just listen, and I will attempt to help you overcome its controlling nature.'";
+<<<<<<< HEAD
 	if ( lastconfession - 7 ) is greater than turns:
 		say "     The priestess's words and advice do indeed help, granting you better control over your lusts, at least for now.";
 		Decrease libido of player by 20;
 		if libido of player is less than 0, now libido of player is 0;
+=======
+	if ( lastconfession - 7 ) > turns:
+		say "     The priestess's words and advice do indeed help, granting you better control over your lusts, at least for now.";
+		Decrease libido of player by 20;
+		if libido of player < 0, now libido of player is 0;
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b
 		now lastconfession is turns;
 	else:
 		say "     Unburdening yourself again, you sadly discover it has little effect as you had nothing to add since your last confession session.";
@@ -265,4 +315,8 @@ instead of entering the Confession Booth:
 [CHURCH HALL ENDS HERE]
 [--------------------------------------------------------------------------------------------------------------------]
 
+<<<<<<< HEAD
 Beach ends here.
+=======
+Beach ends here.
+>>>>>>> f9b516c09e677b5793ccb5068224fe9246c14a9b

@@ -113,8 +113,8 @@ To ask an open question, in number mode, in menu mode, in yes/no mode, in gender
 		say "[current question][line break]";
 	if in menu mode:
 		repeat with counter running from 1 to the number of entries in the current question menu:
-			say "[counter] - [entry counter of the current question menu][line break]".	
-		
+			say "[counter] - [entry counter of the current question menu][line break]".
+
 Chapter 2 - Questions that require a number answer
 
 Section 1 - Flag to set number question mode
@@ -190,9 +190,9 @@ The first menu question rule (this is the invalid menu reply rule):
 			retry;
 		if closed question mode is false:
 			parse;
-	if the number understood is less than 1:
+	if the number understood < 1:
 		retry;
-	if the number understood is greater than the number of entries in the current question menu:
+	if the number understood > the number of entries in the current question menu:
 		retry.
 
 The last menu question rule (this is the default menu question rule):
@@ -351,7 +351,7 @@ Section 3 - Rules for text questions
 
 Text question rules is a rulebook.
 
-The text question rules have  outcomes exit (success), retry (failure) and parse (failure).
+The text question rules have outcomes exit (success), retry (failure) and parse (failure).
 
 The first text question rule (this is the remove punctuation from text questions rule):
 	if punctuation removal is true:
@@ -521,7 +521,7 @@ Section: Introduction
 
 During the normal course of a game, the parser responds to commands given by the player.  If we type look, the parser interprets the command and displays a description of the current room; if we type N, the player heads North (if that exit is available, and so on.
 
-Occasionally, we may want to ask specific questions and process the answers.  Examples may be asking the player's name or age or displaying a menu of options from which the player selects a choice.   Answers to these types of questions fall outside the range of the normal parser functions.  Therefore we need to intercept the player's answers to these types of questions and respond to them separately.
+Occasionally, we may want to ask specific questions and process the answers.  Examples may be asking the player's name or age or displaying a menu of options from which the player selects a choice.  Answers to these types of questions fall outside the range of the normal parser functions.  Therefore we need to intercept the player's answers to these types of questions and respond to them separately.
 
 This extension provides a framework that can be used to ask different types of questions.  The mechanics are hidden behind the scenes to allow us to concentrate on asking and responding to a question without having to implement the framework ourselves.
 
@@ -665,7 +665,7 @@ When a question is asked, we can change the command prompt to indicate to the pl
 
 	Open yes/no prompt: ">".
 
-	Closed gender prompt: "Please enter M,  F or N (Male or Female or Neuter) >".
+	Closed gender prompt: "Please enter M, F or N (Male or Female or Neuter) >".
 
 	Open gender prompt: ">".
 
@@ -690,7 +690,7 @@ If we set the current prompt to "", the relevant default prompt outlined above w
 
 Section: Combining the question and prompt
 
-We can combine the question and the prompt.   To do so, we set the current question to a blank string and the question prompt to the question that we want to ask:
+We can combine the question and the prompt.  To do so, we set the current question to a blank string and the question prompt to the question that we want to ask:
 
 	now current question is "";
 	now current prompt is "What is your name? >";
@@ -741,13 +741,13 @@ We can add our own rules in the game.  For example:
 
 	A number question rule (this is the set age rating rule):
 		if the current question is "How old are you?":
-			if the number understood is less than 5:
+			if the number understood < 5:
 				say "It seems unlikely that a person of such tender years would be playing this game.";
 				retry;
-			if the number understood is greater than 111:
+			if the number understood > 111:
 				say "I find it hard to believe that this is your real age.  Please be more realistic.";
 				retry;
-			if the number understood is less than 21:
+			if the number understood < 21:
 				say "Setting the game mode to mild!";
 				now gamemode is mild;
 			else:
@@ -918,7 +918,7 @@ Example: * Open Sesame - A short example to show the question rules with an init
 
 	A text question rule (this is the gather name rule):
 		if gathering is happening and stage is name:
-			if the number of words in the current answer is greater than 1:
+			if the number of words in the current answer > 1:
 				say "I think we will simply refer to you as [word number 1 in the current answer][line break]";
 				now the player's name is word number 1 in the current answer;
 			else:
@@ -929,10 +929,10 @@ Example: * Open Sesame - A short example to show the question rules with an init
 
 	A number question rule (this is the gather age rule):
 		if gathering is happening and stage is age:
-			if the number understood is less than 5:
+			if the number understood < 5:
 				say "It seems improbable that one of such tender years would be venturing so far.[line break]";
 				retry;
-			if the number understood is greater than 111:
+			if the number understood > 111:
 				say "Let's try to be realistic about this.";
 				retry;
 			now the player's age is the number understood;
@@ -1002,6 +1002,6 @@ Example: * Quiz Night - A short example to show creating a multiple choice quiz.
 			if the table of quiz questions is not empty:
 				say "Well done.  You have survived to the next round.";
 			else:
-				end the story finally saying "Congratulations you have won!" ;
+				end the story finally saying "Congratulations you have won!";
 		else:
-			end the story finally saying "You have been barred from the pub for getting a question wrong." .
+			end the story finally saying "You have been barred from the pub for getting a question wrong.".

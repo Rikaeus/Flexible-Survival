@@ -112,7 +112,7 @@ To say cheetah victory:
 Section 2 - Infection Details
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -139,8 +139,8 @@ When Play begins:
 	now int entry is 18;
 	now cha entry is 12;
 	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 90; 
-	now lev entry is 18; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ]
+	now HP entry is 90;
+	now lev entry is 18; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you lose ]
 	now wdam entry is 18; [ Amount of Damage monster Does when attacking.]
 	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -150,15 +150,15 @@ When Play begins:
 	now breast size entry is 3; [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 8; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 4; [ Width of female sex infection will try and give you ]
 	now libido entry is 20; [ Amount player Libido will go up if defeated ]
-	now loot entry is "dirty water"; 
+	now loot entry is "dirty water";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]sleek[at random]";
 	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
@@ -180,8 +180,8 @@ to say cheetahheat:
 	decrease lastcheetahturns by 3;
 	if lastcheetahturns < 3:
 		say "Your nose begins to overwhelm you.";
-		if libido of player is less than 96, increase libido of player by 5;
-		if (libido of player is greater than 90) and (location of player is fasttravel ) and (slutfucked is greater than 8):
+		if libido of player < 96, increase libido of player by 5;
+		if (libido of player > 90) and (location of player is fasttravel ) and (slutfucked > 8):
 			say "A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs.  Unable to control your lust you strike out in the direction of and immediately upon seeing the infected monster that you scented drop onto you immediately submit, offering yourself freely.";
 			say "[cheetahreset]";
 			let hmonlist be a list of numbers;
@@ -208,7 +208,7 @@ Section 4 - Endings
 when play ends:
 	if the bodyname of the player is "Feral Cheetah":
 		if cheetahmate is 0:
-			if the humanity of the player is less than 10:
+			if the humanity of the player < 10:
 				if the cunts of the player > 0:
 					say "You join the growing band of converts and soon take your place as the pack leader's proud mate. Your group manages to keep away the human forces with sheer speed and cunning, maintaining control of the zoo and some of the surrounding area even as the rest of the city is pacified.";
 				else:

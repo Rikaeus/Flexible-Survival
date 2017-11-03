@@ -13,7 +13,7 @@ Mothdefeat is a number that varies.
 to say Moth attack:
 	now mothgirlnosex is 0;
 	if Mothdefeat is 0: [ first time losing to a moth ]
-		say "     The Mothgirl, grinning at its newfound victim, rubs her hands together, conjuring a mote of light blue dust into her palms before she blows it over your exposed face. Inhaling the dust you feel tipsy and aroused, the girl exploiting your vulnerable state to grind her breasts against your [if breasts of player > 0]own [breast size desc of player] curvature[else][bodydesc of player] torso[end if] before sharing a light kiss on your lips, immediately departing thereafter. She leaves you only with the soft whisper 'enjoy', and as you regain your senses it becomes clear that her ill-meaning affection has had some influence upon you, clouding your mind and leaving you more aroused.";
+		say "     The Mothgirl, grinning at its newfound victim, rubs her hands together, conjuring a mote of light blue dust into her palms before she blows it over your exposed face. Inhaling the dust you feel tipsy and aroused, the girl exploiting your vulnerable state to grind her breasts against your [if breasts of player > 0]own [breast size desc of player] curvature[else][bodydesc of player] torso[end if] before sharing a light kiss on your lips, immediately departing thereafter. She leaves you only with the soft whisper of 'enjoy', and as you regain your senses it becomes clear that her ill-meaning affection has had some influence upon you, clouding your mind and leaving you more aroused.";
 		increase libido of player by 5;
 		decrease humanity of player by 3;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
@@ -68,7 +68,7 @@ to say mothgirl defeat:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -76,9 +76,9 @@ When Play begins:
 	now name entry is "Mothgirl"; [Name of your new Monster]
 	now attack entry is "[one of]She hits you on the cheek with her hand[or]A kick lands upside your face as the moth girl turns in midair[or]The mothgirl punches you in the gut with her fist[or]The mothgirl rams her butt into your face[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "The mothgirl slumps onto the ground with a sigh and tries to protect herself with her fragile wings."; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Moth attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now victory entry is "[Moth attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 4]     In your travels, you are suddenly accosted by a diminutive girl adorned in only a pair of moth wings and similarly moth-like fur around her neck. [one of]Blue[or]Grey[or]Hazel[or]Green[or]Lavender[or]Brown[at random] eyes agleam like jewels, the grey-skinned creature advances upon you, intent on attacking you, though you imagine she'd be a bit more intimidating if she wasn't stark naked.";[ Description of the creature when you encounter it.]
-	now face entry is "feminine visage looking with bright eyes";[ Face description, format as the text "You have a (your text) face."]
+	now face entry is "feminine visage looking with bright eyes";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "has been reduced down to about 5 feet tall and has a light, curvy form. You have moth that, wings with each flap, leave a trail of small dust behind you";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "glimmering grey";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]
@@ -95,8 +95,8 @@ When Play begins:
 	now int entry is 13;
 	now cha entry is 15;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 25; 
-	now lev entry is 2; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 25;
+	now lev entry is 2; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
 	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall' Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -106,15 +106,15 @@ When Play begins:
 	now breast size entry is 3; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 15; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 10; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 15; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 10; [ Width of female sex infection will try and give you ]
 	now libido entry is 50; [ Amount player Libido will go up if defeated ]
-	now loot entry is "cock pill"; 
+	now loot entry is "cock pill";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]winged[or]light[or]slender[or]feminine[at random]";
 	now type entry is "[one of]insectile[or]lepidopterous[or]moth-like[at random]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
@@ -122,7 +122,7 @@ When Play begins:
 
 when play ends:
 	if bodyname is "Mothgirl":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "You do not have any prejudice to any particular infected creature, except spidergirls whose nature invites trouble. You flit around acting on the instincts of wanting sex or having sex with numerable partners.";
 		else:
 			say "You are able to fly anywhere you want in the city and take up a small delivery service, in exchange you get money and multiple sex partners to satisfy your lust.";
@@ -146,11 +146,11 @@ to say cock pill use:
 		now cock width of player is 10;
 		say "With a rush of euphoria, your groin practically explodes as a new [cock of player] cock bursts free of you, twitching readily, fueled by [short ball size] orbs dangling underneath.";
 	else if a random chance of 1 in 5 succeeds:
-		say "You feel dizzy, leaning against the nearest support as your [cock of player] shaft[if cocks of player is greater than 1]s[end if] engorge painfully, growing larger before splitting, revealing a new shaft.";
+		say "You feel dizzy, leaning against the nearest support as your [cock of player] shaft[if cocks of player > 1]s[end if] engorge painfully, growing larger before splitting, revealing a new shaft.";
 		increase cocks of player by 1;
 	else:
 		increase cock length of player by a random number from 1 to 2;
 		Follow the cock descr rule;
-		say "You groan as you gain more male meat, leaving you with a [cock size desc of player] [cock of player] dick[if cocks of player is greater than 1]s[end if]";
+		say "You groan as you gain more male meat, leaving you with a [cock size desc of player] [cock of player] dick[if cocks of player > 1]s[end if]";
 
 Mothgirl For FS ends here.

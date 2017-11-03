@@ -80,7 +80,7 @@ To say centaur defeat:
 	if libido of player < 50:
 		Say "The centaur groans, falling onto its face as you strike the final blow. An apple spills out of the pack on its back.";
 		increase carried of fresh apple by 1;
-	if libido of player > 50 and cocks of player is greater than 0:
+	if libido of player > 50 and cocks of player > 0:
 		Say "The centaur is lying on the ground with its tail skewed off to the side, is the perfect target for your [cock of player] maleness. You sidle up behind the centaur, ignored by it in the pain and embarrassment of loss, and slowly insert your cock.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "The centaur starts as it realizes what you are doing, and two green tentacles, covered with bumps, raise out from under the body of the centaur.";
@@ -90,7 +90,7 @@ To say centaur defeat:
 			increase the libido of the player by 20;
 		else:
 			say "The appearance of the helping tentacles is a welcome development, and you begin thrusting with vigor, the lubrication of the creature's waste keeping you from ripping the walls.";
-			if the cunts of the player is greater than 0:
+			if the cunts of the player > 0:
 				say "The tentacles circle your cock, and one rubs by your clit on its way. Almost immediately, they abandon your moving cock for the wetness of your pussy, stroking in and out in coils as they work to bring you to climax.";
 				say "You lose the battle to hold the climax back as you let out a scream of pleasure, your semen filling the bowels of the centaur while its tentacles are washed out of your pussy by the flow of fluids.";
 			else:
@@ -98,7 +98,7 @@ To say centaur defeat:
 			say "Dazed by the sex, you wander off.";
 			now the libido of the player is 0;
 			decrease the humanity of the player by 4;
-	if libido of player > 50 and cocks of player is 0 and cunts of player is greater than 0:
+	if libido of player > 50 and cocks of player is 0 and cunts of player > 0:
 		say "The centaur groans and falls to the ground, his legs crumpling and shoving him onto his side. You get a good view of a massive, green cock with vinelike bumps on the shaft. Its sheath is a darker green, and a matching ball sack hangs down half a foot from the powerful member, two giant round forms stretching the skin. What really gets to you is the two tentacles, like growths, that sprout from stump-like protrusions of the base of its sheath.";
 		if the humanity of the player < 40:
 			say "The sight of those tentacles drives you insane with lust. You grab them, and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain, that when mixed with your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock could fuck, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then you hear a moan, and the centaur climaxes, spraying thick green seed all over the dusty ground and its underside. The tendrils retract from your body, and you leave the centaur, accepting an apple that it offers you.";
@@ -107,7 +107,7 @@ To say centaur defeat:
 		else if the humanity of the player < 90:
 			say "The sight of the tentacles doesn't bother your fuzzy mind in the least as you leap onto the centaur's furry belly and rub yourself forward and back, arousing yourself and trying to raise yourself to orgasm. Your dripping pussy leaves streaks of wetness on the centaur's fur, and after a short while, something wet and large pokes at your back, breaking your concentration. You stop and turn back in surprise to see the huge green cock starkly erect, its precum-dripping tip a few inches from your face. A trail of precum leads along your body to your back. It isn't done growing, and pushes you forwards a few inches before it is fully ready.";
 			say "You turn and place the cock at your waiting entrance, smearing your hole with precum as you try and force it in.";
-			if the cunt width of the player is less than 16:[too small, cock won't fit]
+			if the cunt width of the player < 16:[too small, cock won't fit]
 				say "The cock doesn't go in, no matter how hard you try, so you bend over and start to lick it eagerly. It spams more precum in response, and your mouth becomes hot and gooey in an instant.";
 				say "You open your mouth wide and fit as much of it in as you can, which means only the soft head. You start to lick it and suck at the hole, drinking in the juices, until it climaxes.";
 				say "The spray of fluid begins slowly, but increases in flow rapidly until you cannot swallow it all, and it shoves your face back, and sprays of hot green cum soak your whole body in a few seconds.";
@@ -126,7 +126,7 @@ To say centaur defeat:
 			if "Kinky" is not listed in the feats of the player:
 				say "The sight of the tentacles puts you off your lunch, and you lose it a short time later, heaving your guts all over the ground.";
 				increase hunger of the player by 10;
-				decrease the hp of the player by 8;
+				decrease the HP of the player by 8;
 				say "You feel weaker after losing your lunch. Maybe you aren't good enough to survive the new world.";
 				now the libido of the player is 0;
 			else:
@@ -163,7 +163,7 @@ An everyturn rule:
 			now the libido of the player is 0;
 			decrease the cock length of the player by 4;
 			say "Your cock keeps bleeding, and shrank a little just now.";
-			decrease the hp of the player by 4;
+			decrease the HP of the player by 4;
 			say "The loss of blood is making you feel woozy.";
 			if the cock length of the player < 1:
 				now the cocks of the player is 0;
@@ -175,18 +175,18 @@ An everyturn rule:
 
 To say centaur attack:
 	if cocks of the player is not 0:
-		say "The centaur flips you over, and then looks you over as you go limp. he snarls at the sight of your cock. 'Little bastard' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [cock of player] member. They tighten, slowly at first, then faster until your poor cock is bleeding from every hole, trying to relieve the pressure. [compresscock]The centaur leaves you like that. 'Never come with one of those again.'";
+		say "The centaur flips you over, and then looks you over as you go limp. he snarls at the sight of your cock. 'Little bastard,' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [cock of player] member. They tighten, slowly at first, then faster until your poor cock is bleeding from every hole, trying to relieve the pressure. [compresscock]The centaur leaves you like that. 'Never come with one of those again.'";
 		[male fury, centaur wants mate, not a companion!]
 	if cunts of player > 0:
 		Say "[centaur rape female]";
 	if cocks of player is 0 and cunts of player is 0 and "Male Preferred" is not listed in feats of player:
-		say "The centaur looks at you with apprehension. 'Nothing at all?' He groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lose it.'";
+		say "The centaur looks at you with apprehension. 'Nothing at all?' he groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lose it.'";
 		now the cunts of the player is 1;
 		now the cunt length of the player is 2;
 		now the cunt width of the player is 1;
 		infect "Mutant Centaur";
 	else if cocks of player is 0 and cunts of player is 0:
-		say "The centaur looks at you with apprehension. 'Nothing at all?' He groans, and kicks his front hoof, knocking you over.  He looks at you as if expecting something to happen, but it doesn't.  He huffs and turns around, kicking dirt and dry grass onto you before riding off.  'Useless creature.'";
+		say "The centaur looks at you with apprehension. 'Nothing at all?' he groans, and kicks his front hoof, knocking you over.  He looks at you as if expecting something to happen, but it doesn't.  He huffs and turns around, kicking dirt and dry grass onto you before riding off.  'Useless creature.'";
 
 
 to say centaurgrowtorso:
@@ -209,7 +209,7 @@ to say centaurmeet:
 Section 5 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 
@@ -238,8 +238,8 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 14;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 45; 
-	now lev entry is 6; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ]
+	now HP entry is 45;
+	now lev entry is 6; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you lose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
 	now area entry is "nowhere"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -249,15 +249,15 @@ When Play begins:
 	now breast size entry is 4; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 17; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 24; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 17; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 24; [ Width of female sex infection will try and give you ]
 	now libido entry is 0; [done in the loss/win text]		[ Amount player Libido will go up if defeated ]
-	now loot entry is "fresh apple"; 
+	now loot entry is "fresh apple";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[or]corrupted[at random]";
 	now type entry is "[one of]centaur[or]mutant[at random]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
@@ -265,7 +265,7 @@ When Play begins:
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[or]corrupted[at random]";
 	now type entry is "centaur"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]

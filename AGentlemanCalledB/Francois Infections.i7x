@@ -34,7 +34,7 @@ no;
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -62,7 +62,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 24;			[ The monster's starting hit points. ]
+	now HP entry is 24;			[ The monster's starting HP. ]
 	now lev entry is 1;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 3;			[ Monster's average damage when attacking. ]
 	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -89,7 +89,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -99,7 +99,7 @@ When Play begins:
 	now defeated entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";				[ Text when monster loses.  Change 'Gingerbread' as above. ]
 	now victory entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";					[ Text when monster wins.  Change 'Gingerbread' as above. ]
 	now desc entry is "I am Error! - You should not be able to encounter this creature, please report how you did this.";						[ Description of the creature when you encounter it. ]
-	now face entry is "devoid of any human features save for your nose and eyes, which seem to be fully functional despite appearing to be drawn on with [if cocks of player is 0 and cunts of player > 0]pink[else]blue[end if] icing.";		[ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "devoid of any human features save for your nose and eyes, which seem to be fully functional despite appearing to be drawn on with [if cocks of player is 0 and cunts of player > 0]pink[else]blue[end if] icing";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a gingerbread [if cocks of player > 0]man[else if cunts of player > 0]woman[else]person[end if]. Your entire form is strangely flat, with no discernible joints, though you are still able to move around normally, if a little stiffly";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "dry, crusty gingerbread";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "";	[ Tail desc., written as a full sentence or left blank for none. ]
@@ -116,7 +116,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 24;			[ The monster's starting hit points. ]
+	now HP entry is 24;			[ The monster's starting HP. ]
 	now lev entry is 1;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 3;			[ Monster's average damage when attacking. ]
 	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -147,7 +147,7 @@ Section 3 - Endings
 [
 when play ends:
 	if bodyname of player is "Cheesecake":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your Cheesecake infection.";
 		else:
 			say "     You survive, but were infected by the Cheesecake.";
@@ -160,7 +160,7 @@ when play ends:
 
 when play ends:
 	if bodyname of player is "Gingerbread":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your Gingerbread infection.";
 		else:
 			say "     You survive, but were infected by the Gingerbread.";

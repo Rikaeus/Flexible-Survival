@@ -49,7 +49,7 @@ Plant Overview is south of Plant Lobby.
 control room is a room. "The control room overlooks the plant's generators. Surprisingly, this room is intact, and you wonder why no monsters ever got in. The walls are covered with control panels and there is a whole bank of control stations in front of the windows. A door in the west wall leads out on a catwalk going from generator to generator. There is power here, and the panels glow softly. Looking out into the main hall of the power plant, you see that the generators are in miserable condition, most are smashed, and several are half-melted and covered in what looks like lava. However, one appears to be in working condition, near the middle.".
 control room is up from Plant Lobby.
 
-control panels is a thing. a control panels is in Control Room. 
+control panels is a thing. a control panels is in Control Room.
 The description of control panels is "[ControlPanelDesc]".
 
 to say ControlPanelDesc:
@@ -76,7 +76,7 @@ The AC of yellow helmet is 20.
 The effectiveness of yellow helmet is 55.
 The placement of yellow helmet is "face".
 The descmod of yellow helmet is "A yellow protective helmet rests atop them, bearing the word 'Supervisor' on the front.".
-The slot of yellow helmet is "head". 
+The slot of yellow helmet is "head".
 
 Administration Offices is a room. Administration Offices is north of Plant Lobby.
 The description of Administration Offices is "There isn't much left of the corridor and adjoining offices that formed the administration of the power plant. Looks like some sort of pyromaniac scattered papers and trashed furniture all throughout and set them ablaze. Thankfully the automatic sprinklers seem to have worked and stopped the whole building from burning down.".
@@ -102,7 +102,7 @@ the scent of cat key is "There is a faint scent of ozone lingering to the key fo
 
 when play begins:
 	add { "cat key" } to invent of Entrance to the Red Light District;
-	
+
 before opening Catwalk Door:
 	if cat key is owned:
 		now Catwalk Door is unlocked;
@@ -134,7 +134,7 @@ understand "activate control panels" and "activate controls" and "activate panel
 
 carry out activating:
 	if findwires is 0:
-		if a random number between one and 20 is greater than the intelligence of the player:
+		if a random number between one and 20 > the intelligence of the player:
 			say "The lights stay red, even though you are trying hard to understand the buttons.";
 		else:
 			say "You use your superior intelligence to turn off the emergency shutdown.";
@@ -149,7 +149,7 @@ carry out activating:
 		say "The power light is still off, and a malfunction light for the generator is on. Looks like you will have to fix it.";
 	else if fixedgens is 1:
 		say "The malfunction light is on, and you have the missing parts. You'll have to go out on the catwalk to fix it.";
-		
+
 
 
 Power Lines is a room. "A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. Looking down the line of other still standing towers, you see the city's powerplant not too far away in one direction, and a part of the city you know pretty well in the other. The library is over there, and the mall as well. Maybe you could restore power to them if you [bold type]fixed[roman type] this tower.[else if fixedgens is 2]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. A red light is glows at its uppermost tip, signaling that there is power and it's flowing towards the closest part of the city - which should include the library as well as the mall.[else]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. The now unbroken lines should allow electricity to reach the nearby part of the city again, though you see that the red light at the uppermost tip of the tower is still off, showing that there is no power. Maybe you should check out the power plant again.[end if]".
@@ -173,7 +173,7 @@ check towerfixing:
 
 carry out towerfixing:
 	say "After reattaching one power line that must have ripped off when the tower was damaged, you lift the tower top, grunting even though it's somewhat lighter than you expected. You tilt it, and try to align the bottom of the top to the top of the bottom.";
-	if a random number between one and 20 is greater than the strength of the player:
+	if a random number between one and 20 > the strength of the player:
 		say "The tower top slips, and falls. Maybe you could try to fix it again?";
 	else:
 		say "The tower top slides into place, and the stress on the wires is released.";

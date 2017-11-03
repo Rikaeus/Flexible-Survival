@@ -15,7 +15,7 @@ when play begins:
 to say losetoSugarGlider:
 	now nosugarglidersex is 0;
 	if bodyname of player is "Sugar Ferret" or facename of player is "Sugar Ferret":
-		if hp of player > 0:
+		if HP of player > 0:
 			say "     Giving up on resisting the sweet marsupial, you allow her to push you to the ground in her eagerness, stripping you of your clothing and gear in the process.  'Yay!  Let's have some fun, you stinky [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random],' she says with a giggle.[run paragraph on]";
 		else:		[steal before]
 			say "     Beaten by the giggling marsupial, you are unable to continue resisting her.  She pushes you to the ground, stripping you of your clothing and gear in the process.  'You [one of]soda jerks[or]fizz heads[or]carbonated tube rats[or]candy hoarders[or]pop guzzlers[at random] don't normally put up nearly so much of a fight.  You must really be holding out on me.'  She leans in closer, giving you an exaggerated, inquiring look before grinning and licking her long tongue across your cheek.  'Is that it?  Got lots of candy you're trying to hide?  I think you're holding out on me, honey,' she says with a playful giggle while her paws and bushy tail run tickling across your body.";
@@ -29,7 +29,7 @@ to say losetoSugarGlider:
 			else:
 				say ".  Finding your stash of snacks empty, she mock-pouts and grinds her twin cunts against your leg.  'Nothing for me at all?  How about some sweet sex then, you [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random]?' she says with a giggle as she turns her attention back to your body.[run paragraph on]";
 	else:
-		if hp of player > 0:
+		if HP of player > 0:
 			say "     Giving up on resisting the sweet marsupial, you allow her to push you to the ground in her eagerness, stripping you of your clothing and gear in the process.[run paragraph on]";
 		else:
 			say "     Beaten by the giggling marsupial, you are unable to resist as she pushes you to the ground, stripping you of your clothing and gear in the process.[run paragraph on]";
@@ -43,7 +43,7 @@ to say losetoSugarGlider:
 		say " The glider looks a little disappointed as she discovers your single member, making a cute pouty lip as she teases your [cock of player] cock to full attention, before positioning herself over your groin and aligning your shaft with one of her dual cunts. She slowly descends over your member, enveloping your flesh in her syrupy folds. Once fully hilted, the giggling sugar glider leans forward over top of you, pressing her large soft breasts against your body as she presses her short muzzle to your lips, her long, dexterous tongue slipping into your mouth as she kisses you deeply, filling your mouth with her sickly sweet taste.";
 		say "     After breaking the kiss, the glider stares down at you with a smile for a moment before she reaches for your hand, pulling it towards her unfilled cunt and stroking your fingers across her sticky folds until you begin to finger her wanton passage yourself, leaving her free to massage and fondle her pillowy breasts as she begins bouncing happily in your lap. The delightful squeezing of her cunt around your shaft as she rides you is quite distracting, but you do your best to focus on pleasuring her second cunt, working your fingers deep into her syrupy folds to ensure your lovely companion is satisfied. Your effort is soon rewarded as her giggles giving way to long moans of delight as your combined efforts quickly push her to climax. With an adorable squeal the sugar glider reaches her peak, her feminine passages clamping down around your cock as her orgasm hits, pushing you over the edge as well, as her second cunt soaks your hand and groin in her sweet nectar.";
 		attempttowait;
-		say "     As her climax subsides, the glider leans forward once more giving you another quick kiss on the cheek before rising to her feet, allowing more of her  sweet smelling syrupy mess to drool from her dual cunt as she pulls free of your shaft. With a smile she reaches down into the pouch on her belly and pulls out a [one of]lollipop[or]jaw breaker[or]piece of saltwater taffy[at random], slipping it into your mouth with a cute titter before [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
+		say "     As her climax subsides, the glider leans forward once more giving you another quick kiss on the cheek before rising to her feet, allowing more of her sweet smelling syrupy mess to drool from her dual cunt as she pulls free of your shaft. With a smile she reaches down into the pouch on her belly and pulls out a [one of]lollipop[or]jaw breaker[or]piece of saltwater taffy[at random], slipping it into your mouth with a cute titter before [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
 	else if cocks of player > 1: [Male PC 2+ cocks]
 		say " Almost bouncing with excitement as she reaches for your [cock of player] cocks, the glider eagerly teases you to full erection before positioning herself over your groin and aligning a shaft with each of her dual cunts. With a gleeful titter, she slowly descends over your [if cocks of player is 2]twin [end if]shafts, enveloping your flesh in her syrupy folds. Once fully hilted, the giggling sugar glider leans forward over top of you, pressing her large soft breasts against your body as she presses her short muzzle to your lips, her long, dexterous tongue slipping into your mouth as she kisses you deeply, filling your mouth with her sickly sweet taste.";
 		say "     After breaking the kiss, the glider stares down at you with a smile for a moment before she begins happily bouncing in your lap. The delightful squeezing of her cunts alternates between your shafts, ensuring you don't get a moment of relief from the pleasurable sensation she so eagerly provides as her ride continues. Lost if the throes of her delight, your lovely companion doesn't even notice as you reach for the bouncing pillowy breasts just above you until you give them a playful squeeze, causing her to meep in surprise. As her rhythm returns, you fondle her lovely breasts and tease her nipples, her giggles giving way to long moans of pleasure as your combined efforts quickly push her to climax. With an adorable squeal, the sugar glider reaches her peak, her feminine passages clamping down around your cocks as her orgasm hits, pushing you over the edge as well.";
@@ -54,7 +54,7 @@ to say losetoSugarGlider:
 		attempttowait;
 		say "     The overpowering sweetness of the sugar glider's feminine juices fills your mouth as she cums. You continue licking and sucking at her quivering folds, drawing out her climax as long as you can to get as much of the sweet nectar as possible while her second cunt soaks your face in her sticky mess.";
 		say "     Staring down at you, your face still half buried in her groin, the glider gives you one last gleeful titter before springing to her feet and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random], but not before pulling a [one of]lollipop[or]jaw breaker[or]piece of saltwater taffy[at random] from her pouch and slipping it into your mouth with a smile.";
-	if ( bodyname of player is "Sugar Ferret" or facename of player is "Sugar Ferret" ) and hp of player > 0:	[steal after]
+	if ( bodyname of player is "Sugar Ferret" or facename of player is "Sugar Ferret" ) and HP of player > 0:	[steal after]
 		if carried of chips > 0:
 			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while you were having sweet, syrupy sex together.  Looking towards her departing figure, you see her turn back and wave tauntingly with the snacks she's stolen tucked into her pouch.  She giggles and gives her tail a teasing flick as she rushes away, making her escape.";
 			decrease carried of chips by 1;
@@ -65,7 +65,7 @@ to say losetoSugarGlider:
 			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while you were having sweet, syrupy sex together.  It doesn't seem that anything's been taken, but there is a note left there.  'Next time, make sure there's something for me to swipe, you stupid [one of]ferret[or]tube rat[or]fizz head[or]soda jerk[at random].  XOXOXO.'  It's even got a pink, sugary imprint of her lips on it.  Looking towards her departing figure, you see her turn back and wave with a giggle before making her escape.";
 			now sugarglidernote is true;
 		else:
-			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while were having having sweet, syrupy sex together.  Thankfully, there doesn't seem like anything's been taken.  Looking towards the departing figure, you see her turn and [one of]make a rude gesture[or]flick her tail teasingly[or]blow you a raspberry[or]give her rear a shake[at random] before disappearing from sight.";
+			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while you were having sweet, syrupy sex together.  Thankfully, there doesn't seem like anything's been taken.  Looking towards the departing figure, you see her turn and [one of]make a rude gesture[or]flick her tail teasingly[or]blow you a raspberry[or]give her rear a shake[at random] before disappearing from sight.";
 
 
 to say beattheSugarGlider:
@@ -120,7 +120,7 @@ to say SugarGliderdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -148,7 +148,7 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 31;			[ The monster's starting hit points. ]
+	now HP entry is 31;			[ The monster's starting HP. ]
 	now lev entry is 3;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 5;			[ Monster's average damage when attacking. ]
 	now area entry is "Midway";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -216,7 +216,7 @@ Section 4 - Endings [Awaiting sugar ferret tie ins]
 [
 when play ends:
 	if bodyname of player is "Sugar Glider":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     Succumbing to your sugary infection, you are soon drawn back to the sights and sounds of the midway...";
 		else:
 			say "     You survive, but were infected by the Sugar Glider.";

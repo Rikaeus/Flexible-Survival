@@ -258,7 +258,7 @@ to say libweaponoffer:
 				WaitLineBreak;
 				say "[libraryexplore]";
 			else:
-				say "     You tell him that you don't want to part with the weapon. James nods and says, 'I can certainly understand that. You want to be able to protect yourself  It's dangerous out there.'  It does take a few polite requests to get the big wolverine to hand the [if weaponpick is 1]nightstick[else if weaponpick is 2]crowbar[else if weaponpick is 3]tire iron[else if weaponpick is 4]flotsam club[else if weaponpick is 5]medium sledge[else if weaponpick is 6]mallet[end if] back to you. You try to offer him something else or another weapon, but he's decided that one's the best for him. Needing to get back on duty, he shuffles you on your way. He does add that he hopes you'll come back if you decide to part with the weapon[if weaponpick > 1] or find an even better one for him[end if] in the future.";
+				say "     You tell him that you don't want to part with the weapon. James nods and says, 'I can certainly understand that. You want to be able to protect yourself. It's dangerous out there.' It does take a few polite requests to get the big wolverine to hand the [if weaponpick is 1]nightstick[else if weaponpick is 2]crowbar[else if weaponpick is 3]tire iron[else if weaponpick is 4]flotsam club[else if weaponpick is 5]medium sledge[else if weaponpick is 6]mallet[end if] back to you. You try to offer him something else or another weapon, but he's decided that one's the best for him. Needing to get back on duty, he shuffles you on your way. He does add that he hopes you'll come back if you decide to part with the weapon[if weaponpick > 1] or find an even better one for him[end if] in the future.";
 				WaitLineBreak;
 
 to say libguard3:
@@ -320,7 +320,7 @@ to say libguard4:
 			now body of player is body entry;
 			now cock of player is cock entry;
 			say "     Losing yourself in the lustful mating, you and James descend further into your wild, wolverine instincts until you both lose yourselves completely.";
-			end the game saying "You have become another wolverine guard watching over the Central Library.";
+			end the story saying "You have become another wolverine guard watching over the Central Library.";
 			now battleground is "void";
 			WaitLineBreak;
 			follow the turnpass rule;
@@ -385,11 +385,11 @@ to say libraryexplore:
 		say "[libbook7]"; [animal handling]
 		now bookfound is 7;
 	attempttowait;
-	if xp of player is greater than ( level of player plus one ) times 10:
+	if XP of player > ( level of player plus one ) times 10:
 		level up;
-	else if "Fast Learner" is listed in feats of player and xp of player is greater than ( level of player plus one ) times 8:
+	else if "Fast Learner" is listed in feats of player and XP of player > ( level of player plus one ) times 8:
 		level up;
-	say "     You turn back to the stacks, but bump the shelf behind you with your pack, sending several tomes onto the floor. Their thumps on the stone floor reverberate through the quiet library. Before the sound has a chance to fade, you start to hear a loud [']Shhh!['] from somewhere in the distance, then another, and another. The sound of flapping fills the air as the shushing sounds start to travel around the room. You try to make your way back to your exit, but a pair of taloned feet swoop in. You manage to dodge to the side, getting pushed into the open reading area. You quickly note that this area is overlooked by  all the floors above and that you are not alone here.";
+	say "     You turn back to the stacks, but bump the shelf behind you with your pack, sending several tomes onto the floor. Their thumps on the stone floor reverberate through the quiet library. Before the sound has a chance to fade, you start to hear a loud [']Shhh!['] from somewhere in the distance, then another, and another. The sound of flapping fills the air as the shushing sounds start to travel around the room. You try to make your way back to your exit, but a pair of taloned feet swoop in. You manage to dodge to the side, getting pushed into the open reading area. You quickly note that this area is overlooked by all the floors above and that you are not alone here.";
 	say "     You find yourself surrounded by harpies whirling around in the air and swooping down to attack you. The one who chased you out from the stacks is similar to the others you've seen outside, but with her grey hair in a tight bun and a pair of reading glasses dangling on a chain. Her eyes are wild with anger at the disturbance to her library.";
 	now harpyfight is 3;
 	LineBreak;
@@ -452,7 +452,7 @@ to say libraryexplore:
 		attempttowait;
 		if libido of player < 60, now libido of player is 60;
 		now humanity of player is 0;
-		end the game saying "You have joined the librarian harpies in their home at the Central Library.";
+		end the story saying "You have joined the librarian harpies in their home at the Central Library.";
 		now battleground is "void";
 		WaitLineBreak;
 		follow the turnpass rule;
@@ -465,8 +465,8 @@ to say libbook1:
 	say "     You come across a book on martial arts with several photos and illustrations of techniques. While reading a book is no replacement for proper training, you should be able to learn a few things to help improve as an unarmed fighter. Enhanced by the infection, your mind picks up many details from a quick perusal of the book[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 1 to bookcollection;
 	if "Martial Artist" is listed in feats of player:
-		say "     You have gained [bold type]25 XP[roman type] from reading the book.";
-		increase xp of player by 25;
+		say "     You have gained [bold type]50 XP[roman type] from reading the book.";
+		increase XP of player by 25;
 	else:
 		add "Martial Artist" to feats of player;
 		say "     You have gained the [bold type]Martial Arts[roman type] feat.";
@@ -483,8 +483,8 @@ to say libbook2:
 to say libbook3:
 	say "     You come across a book on animals with plenty of photos to help you identify the various creatures you may encounter in the city. The book has many details on the habits, abilities and hunting/defensive techniques of the creatures as well. It is a veritable font of knowledge, giving your altered mind lots of scattered information that may improve your chances dealing with the hordes out there[if player is in Grey Abbey Library]. Taking a seat in the library, you read through the book and make sure to absorb the details[else]. You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
 	add 3 to bookcollection;
-	say "     You have gained [bold type]25 XP[roman type] from reading the book.";
-	increase xp of player by 25;
+	say "     You have gained [bold type]50 XP[roman type] from reading the book.";
+	increase XP of player by 25;
 	if player is in Grey Abbey Library, follow the turnpass rule;
 
 
@@ -492,8 +492,8 @@ to say libbook4:
 	say "     You come across a book on animals and their mating habits, colourfully titled [']Wild Animals[']. The book has many details and covers a wide gamut of creatures and even has numerous photos of their genitalia or of them in coitus. With a quick perusal, you are able to pick up a better understanding of some of the creatures out there, slightly improving your ability to deal with them. You decide to take the book with you, only partially for the information. While the information in the book may be a little dry and analytical, you also find it strangely arousing. You hang onto it for some [']personal['] reading later.";
 	add 4 to bookcollection;
 	increase carried of Wild Animals by 1;
-	say "     You have gained [bold type]10 XP[roman type] from reading the book.";
-	increase xp of player by 10;
+	say "     You have gained [bold type]25 XP[roman type] from reading the book.";
+	increase XP of player by 10;
 
 
 to say libbook5:
@@ -506,7 +506,7 @@ to say libbook5:
 to say libbook6:
 	say "     You find a book on first aid which might be of use to you. The small pocket-sized book seems to cover most common injuries and how to treat them. While certainly no match for proper training, it should still help you deal with any unfortunate injuries and help you heal faster through proper care and treatment. You put it in your pack and remind yourself to consult it should you get hurt out in the city or when trying to use a medkit.";
 	add 6 to bookcollection;
-	say "     While the manual is in your possession, you will regain health at the rate of 1 faster each turn and recover 2 more hp when using a healing item (unless superseded by the Expert Medic feat).";
+	say "     While the manual is in your possession, you will regain health at the rate of 1 faster each turn and recover 2 more HP when using a healing item (unless superseded by the Expert Medic feat).";
 	increase carried of First Aid Manual by 1;
 
 
@@ -515,9 +515,9 @@ to say libbook7:
 	add 7 to bookcollection;
 	if "Good Teacher" is listed in feats of player:
 		repeat with z running through pets:
-			increase xp of z by ( level of player + 1 ) * 3;
-			say "     You have gained [bold type]10 XP[roman type] from reading the book and your pets have all gained xp as well.";
-			increase xp of player by 10;
+			increase XP of z by ( level of player + 1 ) * 3;
+			say "     You have gained [bold type]10 XP[roman type] from reading the book and your pets have all gained XP as well.";
+			increase XP of player by 10;
 	else:
 		add "Good Teacher" to feats of player;
 		say "     You have gained the [bold type]Good Teacher[roman type] feat.";
@@ -598,7 +598,7 @@ instead of using First Aid Manual:
 
 the scent of First Aid Manual is "     It smells like an old book.".
 
-Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mattintel is 0 and ( hp of doctor matt > 0 and hp of doctor matt < 100 ):
+Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mattintel is 0 and ( HP of doctor matt > 0 and HP of doctor matt < 100 ):
 	say "     As you're about to talk to Dr. Matt, you consider passing along intel on the creatures in the city, which he can then relay to the military to help in their planning. With your knowledge from the book, you know which information is most likely to cause them to rethink and delay their plans. This would then buy you more time in the infected city, possibly buying you and Dr Matt more time to investigate what's happening, or just so you can do as you please in this fallen city.";
 	say "     [bold type]Shall you relay this intelligence to the military?[roman type][line break]";
 	LineBreak;
@@ -635,7 +635,7 @@ Instead of conversing the Gina while 5 is listed in bookcollection and hyenainte
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if the player consents:
-		say "     Telling Gina about your plan, she's very pleased with your idea. 'I'm really getting sick of some of these reports and stories I'm getting from the others out there. Useless stuff like [']Oh Gina, there was a bunch of dog-things out by the 7-11. You know, the one with the bad Slurpee machine. Well anyway, I saw them there a couple of days ago. Thought you should know.[']  Got that one today. It took me ten minutes to get what little useful stuff she knew out of her, and even then, it probably won't amount to anything. Some quality reporting would help a lot";
+		say "     Telling Gina about your plan, she's very pleased with your idea. 'I'm really getting sick of some of these reports and stories I'm getting from the others out there. Useless stuff like [']Oh Gina, there was a bunch of dog-things out by the 7-11. You know, the one with the bad Slurpee machine. Well anyway, I saw them there a couple of days ago. Thought you should know.['] Got that one today. It took me ten minutes to get what little useful stuff she knew out of her, and even then, it probably won't amount to anything. Some quality reporting would help a lot";
 		if matriarchowned is 1:
 			say ". As the matriarch, you could even show the scouts what information you want and order them to give it properly. I'm sure several of them will shape up if you give them clear orders. That'll give us a real intelligence gathering squad.'";
 			say "     You nod and she sets that up quickly, ordering hyenas around to set up the meeting with you and the scouts. You drill into their heads what kind of information helps the most, how to get it and how to deliver it to Gina, your lieutenant. It seems to sink in with most of them and you chew out the few who don't, making sure they know that you want it that way even if they don't understand it. Gina promises to give the same meeting to the other scouts when they come back. The gang will surely grow and become a stronger force to be reckoned with out in the city now. They should delay the military further as well.";

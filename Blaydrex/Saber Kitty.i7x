@@ -13,12 +13,12 @@ when play begins:
 	add { "Saber Kitty" } to infections of Felinelist;		[list of feline infections]
 
 to say saber attack:
-	if cocks of player is greater than 0:
+	if cocks of player > 0:
 		say "     The saber kitty swipes at you one more time, ripping your clothes and knocking you down onto your butt. When you stay down she smiles that toothy smile, drawing extra attention to those pearly white fangs of hers. 'Finally, a male to play with,' she says as she saunters over to you, her pussy dripping audibly onto the floor with her desperate, heat-filled need. She frowns when she notices you aren't hard. She pushes your chest, making you lay down, and then straddles your face, keeping her pussy just barely out of reach of your face as she begins to lick your cock. She fondles your cock as she continues licking you. Her breasts rub on your stomach.";
 		say "     It isn't long before you begin to smell her heat. The scent starts to fog your mind and you begin to breathe deeply, taking in more and more of her scent. It isn't long before her scent and teasing brings you to a painfully hard erection. The second you are hard, she purrs loudly in delight and wastes no time in turning around and impaling herself on your rod. She begins to ride you with reckless abandon, a rather large puddle of her juices rapidly forming under you.";
 		say "     It doesn't take long before she orgasms on your cock, sending you over the edge. When you finally stop filling her tight cunt she gets up. She smiles her toothy smile again. 'Open wide, love,' she says, placing her pussy over your face, letting some of your combined juices drip all over your face. She then reaches down and lifts your balls before licking under them. 'Ooooh. I can't wait for you to join me in this bliss,' she says before sauntering off, leaving a trail of her juices dripping onto the ground.";
 	else if cunts of player > 0:
-		say "     The saber kitty swipes at you one more time, ripping your clothes and knocking you down onto your butt. When you stay down she smiles that toothy smile, drawing extra attention to those pearly white fangs of hers. 'Mmmmmmmmm. A pussy for the pussy,' she say as she reaches down and begins to finger your cunt. 'Too bad you won't get to use it, slut,' she says before forcing your face against her drooling cunt. It doesn't take long before your entire face is covered in her juices. The scent of her overpowering heat begins to fog and your cunt begins to throb with intense need.";
+		say "     The saber kitty swipes at you one more time, ripping your clothes and knocking you down onto your butt. When you stay down she smiles that toothy smile, drawing extra attention to those pearly white fangs of hers. 'Mmmmmmmmm. A pussy for the pussy,' she says as she reaches down and begins to finger your cunt. 'Too bad you won't get to use it, slut,' she says before forcing your face against her drooling cunt. It doesn't take long before your entire face is covered in her juices. The scent of her overpowering heat begins to fog and your cunt begins to throb with intense need.";
 		say "     Despite your need, you can't bring yourself to remove your hands from her thighs as you lustfully lick her cunt. She smirks, grinding her drooling cunt against you. 'Such a good slut. It won't be long before you learn how good it is to be a sexy saber kitty like me if you keep this up,' she says, mewling at your efforts to get her off. It isn't much longer before she cums hard over your already soaked face. Before she can go your lust gets the better of you and you begin to tend to her some more. This only bring more mewling and purring from her. 'Oh yes, you'll make such a good saber kitty,' she says in a moan. You bring her to several orgasms before you get too tired. She smiles and walks off, leaving a trail of her dripping juices on the ground and you completely unsated.";
 	else:
 		say "     The saber kitty swipes at you one more time, ripping your clothes and knocking you down onto your butt. When you stay down, she eyes your crotch with disappointment. 'No cock or pussy for the kitty?  Well, you'll just have to make it up to me in another way, slut,' she rumbles before forcing your face against her drooling cunt.  It doesn't take long before your entire face is covered in her juices.  The scent of her overpowering heat begins to fog your senses and you are filled with an intense arousal you can do little to sate.";
@@ -26,7 +26,7 @@ to say saber attack:
 	infect;
 
 to say saber loss:
-	if cocks of player is greater than 0:
+	if cocks of player > 0:
 		say "     She staggers back as you deal the final blow. After recovering she purrs happily at finding someone so strong. She approaches you with her toothy smile, drawing extra attention to her pearly white fangs. She gently rubs herself against you, the scent of her heat filling the air. 'Wanna play with the saber kitty, love?' she asks, mewling. It's hard to think. Do you take her up on the offer or do you run before it is too late? You might risk infection if you give in...";
 		if player consents:
 			say "     The scent of her heat is just too unbearable for you. Sensing your wavering judgement she smirks and purrs loudly in your ear. She reaches down and begins fondling your balls as she nuzzles your cheek, her sharp fags brushing against your cheek. You can't take much more and throw her to the ground. You begin to violently fuck her, wanting nothing more than to breed this sexy saber kitty. She moans loudly, her pussy juices forming a puddle under her.";
@@ -40,7 +40,7 @@ to say saber loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -51,8 +51,8 @@ When Play begins:
 	now defeated entry is "[saber loss]";
 	now victory entry is "[saber attack]";
 	now desc entry is "[mongendernum 4]     As you're walking you hear a faint dripping on the ground behind you. You rapidly spin around to see a sexy anthro Sabertoothed Tiger in front of you. It doesn't take long to find the source of the dripping sound as you look down to see her red, swollen pussy dripping copious amounts of fluids onto the ground. She is obviously in heat, and the smell hits you hard in seconds. Her body is beautiful and athletic, with abs and faint but powerful muscles. 'Don't worry, love. You'll learn to enjoy the heat and being knocked up,' she adds before pouncing.";
-	now face entry is "feline and beautiful female smilodon, with two sexy fangs showing at all times,";[ Face description, format as the text "You have a (your text) face."]
-	now body entry is "feminine, with curves to your body that are to die for and some sexy abs.  Your arms have muscles that barely show, but show enough to show that you are indeed stronger than it would seem and end in clawed paws that still can grip things.  Your legs have strong thighs for leaping and pouncing on your prey but are shapely and attractive as well as muscled and end in digitigrade feet.";
+	now face entry is "feline and beautiful female smilodon, with two sexy fangs showing at all times,";[ Face description, format as the text "Your face is (your text)."]
+	now body entry is "feminine, with curves to your body that are to die for and some sexy abs.  Your arms have muscles that barely show, but show enough to show that you are indeed stronger than it would seem and end in clawed paws that still can grip things.  Your legs have strong thighs for leaping and pouncing on your prey but are shapely and attractive as well as muscled and end in digitigrade feet";
 	now skin entry is "covered in a soft beige fur that turns white on the front of your torso and the inside of your ass cheeks";
 	now tail entry is "You have a short saber kitty tail that is covered in fur. It is adorable and seems to wag like a dog tail when you get too excited.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "barbed and knotted saber";[ Cock Description, format as you have a 'size' (your text) cock]
@@ -68,7 +68,7 @@ When Play begins:
 	now int entry is 1;
 	now cha entry is 20;
 	now sex entry is "Female";        [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 45;               [ The monster's starting hit points. ]
+	now HP entry is 45;               [ The monster's starting HP. ]
 	now lev entry is 10;              [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 12;             [ Monster's average damage when attacking. ]
 	now area entry is "Outside";      [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]

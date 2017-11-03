@@ -5,7 +5,7 @@ Helpful Routine Templates by Core Mechanics begins here.
 Section 1 - Basic Routines
 
 to malemonstersex: [This is the most basic version of player loss routines for male creatures]
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     This is an 'opener' for players who submitted, rather than lost. It's great for adjusting context, but not entirely necessary.";
 	else:
 		say "     This version is for player loss. Ideally, the player should act less compliant than if they had submitted.";
@@ -60,7 +60,7 @@ to staticmenu: [A basic, static menu that's easily expandible, but otherwise can
 		say "[bold type]Choices:[roman type][line break]";
 		say "(1) [link]Choice 1[as]1[end link][line break]";
 		LineBreak;
-		say "(0) [link]Abort[as]0[end link][line break]";	
+		say "(0) [link]Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-1)>[run paragraph on]";
 			get a number;

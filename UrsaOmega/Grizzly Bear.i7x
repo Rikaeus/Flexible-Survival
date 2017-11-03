@@ -12,14 +12,14 @@ when play begins:
 
 to say grizzlydesc:
 	setmongender 3; [creature is male]
-	say "     A large bear-man stands before you. His large stature and shaggy brown fur seem to paint him as a grizzly bear. Except for his fur, he's only wearing a ragged pair of pants, the holes in which allow some short glimses at a thick furred sheath and hefty balls hanging between his legs. A thick ursine cock peeks out just a little from the sheath. 'Ah! Another upstart cub!', he growls. 'It's been a while since I've had some fun...!'";
+	say "     A large bear-man stands before you. His large stature and shaggy brown fur seem to paint him as a grizzly bear. Except for his fur, he's only wearing a ragged pair of pants, the holes in which allow some short glimses at a thick furred sheath and hefty balls hanging between his legs. A thick ursine cock peeks out just a little from the sheath. 'Ah! Another upstart cub!' he growls. 'It's been a while since I've had some fun...!'";
 	say "     Suddenly, he charges at you! It's a fight!";
 
 to say losetogrizzly:
 	let bearanal be anallevel - 1;
 	if cunts of player > 0 and a random chance of 1 in 3 succeeds:
 		say "     You collapse to your knees in front of the grizzly bear, submitting to his superior strength. The grizzly bear walks behind your kneeling form, firmly pushing your face into the dirt while stroking his hardening bearcock. 'Looks like I'll have to teach ya your place, cub...' Raising your hips up with one paw while guiding his cock to your moist, [cunt size desc of player] pussy with the other. ";
-		if cunt width of player is less than 3:
+		if cunt width of player < 3:
 			say "His thick cock stretches your lips open as you struggle to accommodate his substantial man-meat. With a grunt on his part and a moan from you he bottoms out inside you, his balls resting against your rear.";
 		else:
 			say "His thick cock spears your womanly folds with ease, smoothly sliding his shaft into your cunt with an approving grunt.";
@@ -33,7 +33,7 @@ to say losetogrizzly:
 	else:
 		say "     You collapse to your knees in front of the grizzly bear, submitting to his superior strength. Grinning at your weakened state he walks up to your front, one paw slowly stroking up and down his sizable bear dick. Reaching out with a large, bearlike paw, he grabs the back of your head and pulls it in to his groin. 'You know what to do, cub.' he growls, rubbing his cock against your face. Your nose fills with the musky scent of male bear, [if cocks of player > 0]your cock to becoming rock-hard,[end if][if cunts of player > 0] your cunt moistening with need, [end if]and your head starts to spin a bit. You eagerly lick up and down the ursine shaft. You even duck down to his ballsack, juggling his testicles a bit with your tongue before returning to lapping at his shaft.";
 		if a random chance of 2 in 3 succeeds:
-			say "     The grizzly interrupts you, grunting 'That's enough, cub, now it's time for the main event!' and gripping both sides of your head. Without ceremony, he pulls your mouth down on his cock, groaning as your mouth envelopes his cock. He guides your head up and down his shaft, the salty taste of his precum filling your mouth. Just as you get comfortable sucking his cock, his thrusts get more forceful, pushing his cock down your throat. You suppress your gag reflex as he begins face-fucking you, his hefty ballsack slapping against your [facename of player] face. You hear the grizzly growl above you and feel his shaft pulse in your throat before you feel him pour hot bearcum down your gullet. He starts pulling out as he cums, filling your mouth with his strong-tasting seed and finally painting your face with the last few spurts of grizzly cum. 'Not bad, cub. We should do this more often.' he says before walking off, leaving you to clean yourself up.";
+			say "     The grizzly interrupts you, grunting 'That's enough, cub, now it's time for the main event!' and gripping both sides of your head. Without ceremony, he pulls your mouth down on his cock, groaning as your mouth envelopes his cock. He guides your head up and down his shaft, the salty taste of his precum filling your mouth. Just as you get comfortable sucking his cock, his thrusts get more forceful, pushing his cock down your throat. You suppress your gag reflex as he begins face-fucking you, his hefty ballsack slapping against your [facename of player] face. You hear the grizzly growl above you and feel his shaft pulse in your throat before you feel him pour hot bearcum down your gullet. He starts pulling out as he cums, filling your mouth with his strong-tasting seed and finally painting your face with the last few spurts of grizzly cum. 'Not bad, cub. We should do this more often,' he says before walking off, leaving you to clean yourself up.";
 		else:
 			say "     The grizzly interrupts you, grunting 'That's enough, cub, now it's time for the main event!' and gripping both sides of your head. Without ceremony, he pulls your mouth down on his cock, groaning as your mouth envelopes his cock. He guides your head up and down his shaft, the salty taste of his precum filling your mouth. After a few minutes of this, you feel his cock pulse and throb in your mouth. Pushing your head off his cock with one paw, he grabs it in the other and pumps his meat frantically. With a growl, he cums hard, splattering his thick, musky load across your [facename of player] face. You're marked with sticky bearcum that covers your face and drips down onto your chest. The scent of it is strong and you can't help yourself from licking up as much of it as you can get. The big ursine chuckles at this. 'That's a good, eager cub. Lick it all up and come back for more later,' he says before trundling off with a rumbling chuckle.";
 
@@ -108,34 +108,34 @@ to say gbearrideanal:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Grizzly Bear"; 
+	now name entry is "Grizzly Bear";
 	now attack entry is "[one of]The grizzly swipes at you with a huge paw![or]The grizzly hits you with a huge brown-furred shoulder slam.[or]The grizzly charges you with a powerful headbutt![at random]";
-	now defeated entry is "[beatthegrizzly]"; 
-	now victory entry is "[losetogrizzly]"; 
-	now desc entry is "[grizzlydesc]"; 
+	now defeated entry is "[beatthegrizzly]";
+	now victory entry is "[losetogrizzly]";
+	now desc entry is "[grizzlydesc]";
 	now face entry is "now the head of a grizzly bear, with a short muzzle tipped in a large, wet, black nose and a wide head topped by two round bearish ears"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a bipedal grizzly bear, thickly proportioned and muscled, with large ursine pawlike hands ending in sharp claws"; 
+	now body entry is "that of a bipedal grizzly bear, thickly proportioned and muscled, with large ursine pawlike hands ending in sharp claws";
 	now skin entry is "[one of]thick brown fur covered[or]grizzly furred[or]shaggy brown furred[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a short ursine tail that hangs over your ass."; [ Tail desc., written as a full sentence or left blank for none. ] 
-	now cock entry is "ursine"; 
+	now tail entry is "You have a short, ursine tail that hangs over your ass."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "ursine";
 	now face change entry is "your head widens and your face pushes out. Your nose becomes large and wet as it migrates to the end of your new bearlike muzzle and your ears move to the top of your head, becoming rounded and ursine"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands become more paw-like"; 
-	now skin change entry is "thick shaggy brown bear fur spreads across your skin"; 
+	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands become more paw-like";
+	now skin change entry is "thick shaggy brown bear fur spreads across your skin";
 	now ass change entry is "your rump becomes thicker and more rounded and bearlike, with a short fuzzy tail growing over your new ursine ass"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "a furred sheath grows around it, holding it when it's not erect"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 20; 
-	now dex entry is 12; 
-	now sta entry is 22; 
+	now str entry is 20;
+	now dex entry is 12;
+	now sta entry is 22;
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 96; 
+	now HP entry is 96;
 	now lev entry is 14; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 18; [ Monster's average damage when attacking. ]
 	now area entry is "Zoo"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -154,9 +154,9 @@ When Play begins:
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]burly[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]ursine[or]grizzly[or]bearlike[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false; 
-	now resbypass entry is false; 
-	now non-infectious entry is false; 
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 
@@ -166,7 +166,7 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Grizzly Bear":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     You succumb to your bear instincts, going completely feral. When the military finds you, you're almost entirely unable to communicate with them. You manage to defeat each squad that discovers you, using your unnatural strength and stamina to take them out one by one. You enjoy leaving the last one conscious so you can fuck them into big, strong bears like yourself. Your luck finally runs out one day when searching for your next victim. You feel a pinch at your neck; swatting your paw at the sensation you notice the tranquilizer dart. Already beginning to feel the effects, you turn to see two squads of soldiers descending upon you. You fight fiercely, but a second prick signals the end of the fight as your body becomes too heavy to lift. Before you slip into unconsciousness you hear one of the soldiers mention that the dose was practically enough to down an elephant...";
 			say "     You wake up in a government holding facility, where you are poked and prodded (under heavy restraint and anesthesia) for what feels like a month. The scientists must not have been optimistic about your prospects in the post-infection world, because after another elephant dose of tranquilizer you wake up somewhere heavily wooded and remote. You find a salmon-rich stream nearby and settle into a decidedly ursine lifestyle of mostly eating and sleeping.";
 			if cunts of player > 0:

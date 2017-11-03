@@ -51,7 +51,7 @@ instead of conversing the Beverly:
 			Say "     The mouse's ears droop and she looks at you sadly for a moment before sighing softly. 'Th... that's ok... My name is Beverly,' she says, her voice so quiet it's barely a whisper. 'If you need any help, let me know.' Finishing, Beverly walks back behind the counter to continue reading her book. Out the corner of your eye, you see a mallrat giving you a dirty look.";
 			now bevtalk is 1;
 	else if bevtalk is 1:
-		say  "     Getting the feeling you are being watched as you browse the books, you turn and look. With wide eyes, Beverly quickly turns back to the book she has in front of her when you glance her way. Do you go over to talk with her?";
+		say "     Getting the feeling you are being watched as you browse the books, you turn and look. With wide eyes, Beverly quickly turns back to the book she has in front of her when you glance her way. Do you go over to talk with her?";
 		if player consents:
 			say "     Feeling bad, you go over to the counter and gently clear your throat. When Beverly looks up, you apologize about earlier and ask if she wants to talk now. Her eyes brighten and she nods with a small smile. 'Yes... yes I would.' When she sees you're listening, she continues. 'I was an elementary school teacher that was working part-time in the evening here at the bookstore, when I could, to make ends meet.' She sighs softly, rests an elbow on the counter, and then rests her cheek in the palm of her dainty paw. 'I was closing one night when there was a commotion coming from the mall. Peeking out the door, I saw what looked like a small group of, at my first thought, was people dressed in animal costumes attacking customers and committing unspeakable acts with them.'";
 			say "     Beverly grows quiet for a moment, the inside of her ears growing red while her whisker and tail twitches a few times. Snapping out of her thoughts, she pushes a forefinger against the bridge of her muzzle then chuckles gently and smiles embarrassedly. 'I forgot that I don't need my glasses anymore. Some habits are hard to break. When I saw what was going on I quickly dropped the security gate. As I was locking it, a humanoid mouse reached through the gate and managed to grab some of my hair. I was able to struggle free, but not before...' She stops again and seems to visibly shudder. 'Not before it managed to ejaculate on me,' she says as her breathing starts to grow more labored. 'When he, I figured out it was a guy, saw that he couldn't reach me, he left. I didn't wait around to see if he would come back and locked myself in the back room.' Beverly suddenly hugs her arms under her ample breasts while looking away and speaks a little softer.";
@@ -103,8 +103,8 @@ carry out browsebooks:
 				Increase diceroll by bonus;
 				If diceroll >= 12:
 					say "With a chuckle, you nod in agreement. After helping complete the complex crossword, you feel a little bit more intelligent.";
+					say "[bold type]Your intelligence has increased by 1![roman type][line break]";
 					Increase intelligence of player by 1;
-					say "Your intelligence has increased by one!";
 					Follow the turnpass rule;
 				else:
 					say "You nod and chuckle in agreement. Some of the clues seemed to sail right over your head.";
@@ -179,14 +179,14 @@ carry out browsebooks:
 			say "     Beverly points to a set of shelves in one corner of the store. 'There should be a book over there discussing self defense. It might be of help to you.' You thank her and head for the shelf she pointed to. After a minute of searching you find a book titled [bold type]Self Defense 101[roman type]. Taking it, you settle into a chair and look through your recent acquisition. As you suspected when you picked up the book, it's more or less basic defensive tactics, though you do manage to pick up a few pointers on how to parry and dodge attacks.";
 			Increase dexterity of player by 1;
 			LineBreak;
-			say "You're dexterity has increased by one!";
+			say "[bold type]You're dexterity has increased by 1![roman type][line break]";
 			Increase sdbook by 1;
 			Follow the turnpass rule;
 		else if sdbook is 1:
 			say "     Even though you found the pointers in the self defense book pretty basic, you decide to delve into it some more to see if you can pick up anything else from it. You manage to find a few more pieces of advice, though it's all still pretty basic, on using your opponent's energy against them to counter their attack.";
 			Increase dexterity of player by 1;
 			LineBreak;
-			say "You're dexterity has increased by one!";
+			say "[bold type]You're dexterity has increased by 1![roman type][line break]";
 			Increase sdbook by 1;
 			Follow the turnpass rule;
 		else:
