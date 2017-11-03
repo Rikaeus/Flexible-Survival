@@ -26,7 +26,7 @@ to say animebabedesc:
 
 to say losetoanimebabe:
 	now noanimebabesex is 0;
-	if hp of player > 0:
+	if HP of player > 0:
 		say "     Unwilling to continue to fight the cute girl, you let her push you to the ground at her feet. ";
 	else:
 		say "     Beaten by the anime babe, she giggles happily and pushes you to the ground. ";
@@ -158,19 +158,19 @@ to say beattheanimebabe:
 
 
 Section 2 - Monster Insertion
- 
+
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
- 
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Anime Babe"; [Name of your new Monster]
 	now attack entry is "[one of]The anime babe giggles as she punches you soundly, sending you flying![or]The anime babe whips out a paper fan and smacks you repeatedly until you're dizzy![or]The anime babe kicks you in the gut![or]The anime babe bends over, flashing her panties at you![or]The anime babe lunges at you, burying your face in her bosom![at random]";
 	now defeated entry is "[beattheanimebabe]";
-	now victory entry is  "[losetoanimebabe]";
+	now victory entry is "[losetoanimebabe]";
 	now desc entry is "[animebabedesc]";
-	now face entry is "fairly large in proportion to your body, with long, bright blue hair, a near invisibly small nose, and gargantuan shining eyes."; [ Face description, format as the text "You have a (your text) face."]
+	now face entry is "fairly large in proportion to your body, with long, bright blue hair, a near invisibly small nose, and gargantuan shining eyes."; [ Face description, format as the text "Your face is (your text)."]
 	now body entry is "rail thin, without any visible body fat or apparent room for most of your vital organs. When at rest, no part of you seems to move at all, saving on animation. Your arms are exceptionally scrawny, almost skeletal. Your elbows are extremely angular, and your hands are quite dainty. Your legs are disproportionately lengthy, making up a full two thirds of your height. Each is extremely slender, tapering down to feet so small it's a wonder they can stand. Your body has grown a school girl's outfit to tantalizingly cover your overly sexualized body";
 	now skin entry is "smooth, pink"; [ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a tight little ass covered in cute panties that you can't help but flash at every opportunity.";
@@ -187,13 +187,13 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Female";
-	now hp entry is 63; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 9; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now HP entry is 63; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 9; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Campus"; [ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2; [ Number of Breasts infection will give you. ]
 	now breast size entry is 5; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
@@ -228,12 +228,12 @@ this is the animehammer rule:		[double-damage]
 	say "The anime babe pulls a huge hammer out of nowhere, slamming it into your head and [one of]pummeling you into the ground[or]sending you flying[at random]. This powerful blow does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[headabsorbancy]"; [blow to the head]
-	if absorb is greater than dam:
+	if absorb > dam:
 		now absorb is dam;
-	if absorb is greater than 0:
+	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease hp of the player by dam;
-	increase hp of player by absorb;
+	decrease HP of the player by dam;
+	increase HP of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 
@@ -258,7 +258,7 @@ Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Anime Babe":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			if player is pure:
 				if cunts of player > 0:
 					say "     As your old life slips further and further away, you end up wandering off into the city in search of adventure and kawaii cuteness. You stumble around for a while, having many a misadventure - often seeming to involve tentacles - but always seem to come out of it okay in the end - though often with a sore end. Eventually, you wander onto campus and settle in there. You make friends with several of the other girls like you around, have sexy sleepovers and attend some of the intermittent (and often somehow erotic) classes that still go on[if cocks of player > 0]. Hiding something a little extra under your short dress, you make for a particularly popular student[end if].";

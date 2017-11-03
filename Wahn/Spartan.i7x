@@ -9,7 +9,7 @@ when play begins:
 Section 1 - Monster Responses
 
 to say Spartan wins:
-	if hp of player > 0:[player submits]
+	if HP of player > 0:[player submits]
 		if bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player is 0:[Spartans, but not herms and females]
 			say "     A shocked expression on his face, the young warrior stares at you as you kneel and submit to him. Then anger clouds his features and he shouts 'Impostor! How dare you disguise yourself as one of your betters, slave. I'll teach you your place, dirty Helot!' With that, he rips the helmet off your head and throws it on the ground, its metal crumpling like it's a cheap copy and not the well-crafted helmet it was seconds before. Then he shreds your cloak, its bright red colour fading as he touches it and the material ripping easily in his hands.";
 			LineBreak;
@@ -167,12 +167,12 @@ to say SpartanDesc:
 	if bodyname of player is "Spartan" and facename of player is "Spartan":
 		say "		  'Welcome, brother - I see I'm not the only one selected for this test. Let us measure our strength against each other and see who is superior.'";
 	else:
-		say "		  'Ah, a Helot. Some welcome relief for my aching balls.' he says to himself, lowering a hand to fondle them and stroke his long cock. 'Get over here, slave - I have need of you.'";
+		say "		  'Ah, a Helot. Some welcome relief for my aching balls,' he says to himself, lowering a hand to fondle them and stroke his long cock. 'Get over here, slave - I have need of you.'";
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -180,7 +180,7 @@ When Play begins:
 	now name entry is "Spartan";
 	now attack entry is "[one of]With a quick sweep of his leg, he brings you crashing to the floor.[or]He grabs hold of you, taking you into a choke-hold that you only just manage to wind your way out of.[or]First throwing a handful of dirt into your face, the young Spartan strikes a painful blow to your side while you're off guard.[at random]";
 	now defeated entry is "[Spartan loses]";
-	now victory entry is  "[Spartan wins]";
+	now victory entry is "[Spartan wins]";
 	now desc entry is "[SpartanDesc]";
 	now face entry is "a handsome young man's, still smooth and beardless. A Greek helmet with a large red horse-hair plume covers your short black hair";
 	now body entry is "that of a young man, quite fit and healthy. It is garbed in nothing but a pair of sandals and a long red cloak, held around your shoulders by a brooch";
@@ -199,7 +199,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Male";
-	now hp entry is 95;
+	now HP entry is 95;
 	now lev entry is 10;
 	now wdam entry is 15;
 	now area entry is "Campus";         [ Current options are 'Outside' and 'Mall'  Case sensitive]
@@ -258,8 +258,7 @@ to HistoryLectureVisit:
 				decrease humanity of player by 5;
 				WaitLineBreak;
 				say "     Some time later, the professor calls for a quick break and turns to a young man in a loincloth standing over at the door of a side room. 'Get the other slaves, it's time for some refreshments.' With a nod the Helot servant goes through the door, soon to return with several others, carrying platters with food and drink. The gathered Spartans take what their slaves offer them, eating and drinking heartily and chatting amongst themselves.";
-				if graphics is true:
-					project the figure of SpartanHelot_dressed_icon;
+				project the figure of SpartanHelot_dressed_icon;
 				say "     Meanwhile, the professor takes a drink from the mug of wine he's offered, then sets it aside and opens up his tunic at the front. Pulling out his cock, he tells the Helot to take care of it, which leads to the young man immediately going down on his knees and starting to suck him off.";
 				LineBreak;
 				if cocks of player > 0 or cunts of player > 0:[genitals needed]
@@ -324,7 +323,7 @@ to HistoryLectureVisit:
 						say "     Finally satisfied, he says 'There, that's that', then continues 'Now leave us, these young men have a lot to learn about strategy and tactics. He turns back to the group of Spartans sitting in the first rows of the lecture hall, leaving you to walk to the exit and quietly slip out of the room.";
 						infect "Helot";
 				else:[forced blowjob]
-					say "     Shaking your head, you turn to get out of there, only to be brought down by several of the young Spartans sprinting after you. Your struggling against their grip is quickly brought to an end by a blow to the chest that drives the air out of your lungs and you're dragged to the front of the lecture theater. With a Spartan at your left and right holding your arms bent backwards, you find yourself on your knees in front of the professor. 'Open up, or I'll have you beaten.' he says and roughly shoves his manhood into your mouth. Fucking your face in a harsh and fast pace, he sometimes pushes his cock into your throat and keeps it there until you start seeing stars from lack of air and have to gasp for breath.";
+					say "     Shaking your head, you turn to get out of there, only to be brought down by several of the young Spartans sprinting after you. Your struggling against their grip is quickly brought to an end by a blow to the chest that drives the air out of your lungs and you're dragged to the front of the lecture theater. With a Spartan at your left and right holding your arms bent backwards, you find yourself on your knees in front of the professor. 'Open up, or I'll have you beaten,' he says and roughly shoves his manhood into your mouth. Fucking your face in a harsh and fast pace, he sometimes pushes his cock into your throat and keeps it there until you start seeing stars from lack of air and have to gasp for breath.";
 					say "     After far too long of this ordeal, the old man finally moans and blasts his cum directly down your throat. The two younger Spartans let you go as he pulls out, and you collapse on the floor, rubbing your hurting joints. 'I'm in half a mind to let all of my pupils have a go at your sorry ass, but we've wasted enough time on the likes of you. Leave, now!' As fast as you can, you limp up to the exit and slip out through the door.";
 					infect "Helot";
 					infect "Helot";
@@ -335,7 +334,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Spartan":
-		if humanity of player is less than 10:   [succumbed]
+		if humanity of player < 10:   [succumbed]
 			if cunts of player > 0:[female + herm]
 				if "Submissive" is not listed in feats of player:
 					say "No matter about the rest of you, having female genitals makes the other Spartans belittle you, leading to quite a few engaging you in battle to 'show you your place'. It takes quite a bit of work handing out black eyes and sprained wrists until you've shown them that just because you have a pussy, you aren't weak. After gaining grudging acceptance, you keep yourself busy with training sessions with other promising Spartans, usually winning and making them eat you out.";

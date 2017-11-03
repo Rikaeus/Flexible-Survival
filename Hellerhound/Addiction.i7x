@@ -23,7 +23,7 @@ before using a grab object (called X):
 		now foundaitem is 0;
 		repeat with Z running from 1 to the number of rows in the Table of Addictive Items:
 			choose row Z from the Table of Addictive Items;
-			if the object entry is  X:
+			if the object entry is X:
 				now foundaitem is 1;
 				now addicted is 1;
 				now addictlefttime is 16 divided by the speed entry;
@@ -32,7 +32,7 @@ before using a grab object (called X):
 				break;
 		if foundaitem is 0:
 			say "ERROR: ADDICTION NOT FOUND";
-			
+
 
 withdrawel is a number that varies.
 an everyturn rule:
@@ -44,7 +44,7 @@ an everyturn rule:
 			say "Your head begins to hurt, and you have a powerful urge to get some more [addictname].";
 		else if addictlefttime < 2:
 			say "You NEED MORE [addictname]!";
-			decrease the hp of the player by 5;
+			decrease the HP of the player by 5;
 			increase withdrawel by 1;
 		if withdrawel > 0:
 			if withdrawel < 1:
@@ -57,7 +57,7 @@ an everyturn rule:
 				increase the strength of the player by 7;
 				increase the dexterity of the player by 5;[leaves you worse off]
 				say "You have recovered from the drug.";
-	
+
 
 Section 2 - Test Drug
 
@@ -78,7 +78,7 @@ to say bloodpilluse:
 	now onbloodpill is 1;
 	increase bloodpillturns by 4;
 	increase the strength of the player by 10;
-	increase the dexterity of the player by 10; 
+	increase the dexterity of the player by 10;
 
 an everyturn rule:
 	if bloodpillturns > 0:

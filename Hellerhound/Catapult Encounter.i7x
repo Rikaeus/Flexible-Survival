@@ -35,7 +35,7 @@ instead of resolving a loaded catapult:
 			decrease the thirst of the player by 25;
 			decrease humanity of player by 10;
 			if "Iron Stomach" is not listed in feats of player:
-				weakrandominfect; 
+				weakrandominfect;
 				weakrandominfect;
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		else:
@@ -53,7 +53,7 @@ instead of resolving a loaded catapult:
 			increase catadiff by 10;
 		if the player consents:
 			say "You begin to wriggle into the tangle of ropes.";
-			if a random number between one and catadiff is greater than the dexterity of the player:[the catapult fires]
+			if a random number between one and catadiff > the dexterity of the player:[the catapult fires]
 				say "You accidentally bump a trigger rope, and the contraption begins to swing. You get out of there fast. [catapult fire]";
 			else:
 				say "You manage to get the resources without touching the ropes.";
@@ -63,7 +63,7 @@ instead of resolving a loaded catapult:
 					now gotcatares is 1;
 		else:
 			say "You look at the resources, tortured by their nearness, but decide to leave them be.";
-			
+
 
 
 Catapult Encounter ends here.

@@ -5,7 +5,7 @@ Version 1 of Centaur Stallion for FS by Stripes begins here.
 [This monster was updated and converted to a more readable format by Stripes. All sexual encounters from MP MUD have been rewritten to fit the game better, all credit to creature idea goes to original author!]
 
 "Adds Centaur Stallion to Flexible Survival."
- 
+
 Section 1 - Monster Responses
 
 when play begins:
@@ -28,7 +28,7 @@ to say losetocentaurstallion:
 			say "     As his equine meat slaps against your rear a few times, he shifts his stance and starts grinding it against your backside, then thrusts it into you with a whinny of pleasure. You groan as the centaur's horse cock is driven into you, its flat glans spreading you wide as he starts plowing into you. You moan beneath him as his huge cock as he uses you as his mare. He thrusts in and out of you, grunting in a near bestial manner as that gigantic rod pounds into you over and over. With a sound almost like a neigh, he drives deep inside you and cums powerfully, filling you with copious amounts of centaur spunk. His huge balls throb and expel cup after cup of virile, equine seed into you until finally you are left bloated and panting on the ground when he finally withdraws and trots off proudly.[mimpregchance]";
 		else:
 			say "     The centaur stallion snorts in frustration at your lack of a pussy for him to fill and presses you to the ground. He steps overtop you and pounds his hoofs on the hard ground again and again. As you cringe to avoid them, his huge cock slaps against his equine belly again and again, growing fully and harder. His pre dribbles down onto you as a warning of what comes soon after. With a loud whinny, his glans flares and blast after blast of centaur cum splatters onto you, leaving you soaked in his semen. He snorts again and trots off, frustrated and only a little satisfied.";
-			decrease hp of player by 10;
+			decrease HP of player by 10;
 		if "Female Preferred" is listed in feats of player and girl is not banned:		[change target to Mare for infection]
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
@@ -71,17 +71,17 @@ to say beatthecentaurstallion:
 
 
 Section 2 - Monster Insertion
- 
+
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
- 
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Centaur Stallion"; [Name of your new Monster]
 	now attack entry is "[one of]The centaur stallion fires his bow at you, piercing your shoulder with an arrow![or]The centaur stallion charges at you, knocking you to the ground roughly![or]The centaur rears up and manages to land a heavy hoof on your shoulder![or]The centaur swings a punch at you, bashing you in the jaw![or]The stallion rears up, causing his semi-hard cock to slap against his equine belly and release a spurt of precum onto you and also giving you a good view of his impressive penis and bloated balls![at random]";
 	now defeated entry is "[beatthecentaurstallion]";
-	now victory entry is  "[losetocentaurstallion]";
+	now victory entry is "[losetocentaurstallion]";
 	now desc entry is "[centaurstalliondesc]";
 	now face entry is "mostly human at first glance, but with a broad flaring nose and pointed ears. It has a male cast to it";
 	now body entry is "that of a centaur, with a muscled, human upper torso. Your body is chiseled and has well-defined muscles. Broad shouldered and strongly-built, it evokes the male form. Your arms are strong and muscular, and very human in appearance. Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of shiny black hooves";
@@ -100,19 +100,19 @@ When Play begins:
 	now int entry is 14;
 	now cha entry is 14;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 35; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 4; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now HP entry is 35; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 6; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 28; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 20; [ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock width entry is 20; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 0; [ Number of Breasts infection will give you. ]
 	now breast size entry is 0; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 0;
-	now cunt width entry is 0; 
+	now cunt width entry is 0;
 	now libido entry is 40; [ Amount player Libido will go up if defeated ]
 	now loot entry is "centaur cum";
 	now lootchance entry is 33; [ Chance of loot dropping 0-100 ]
@@ -143,12 +143,12 @@ this is the hoofstomp rule:		[double-damage hoof stomping]
 	say "The centaur rears up to attack you, slamming both hooves into [one of]you[or]your chest[purely at random], knocking your over briefly. [one of]While you're prone,[or]This allows it to use[purely at random] its hard, heavy hooves to [one of]pound at you[or]stomp away at you[or]strike you repeatedly[purely at random] until you manage to get out of the way and get back on your feet. This [one of]powerful[or]strong[or]devastating[purely at random] attack does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield while pinned]
-	if absorb is greater than dam:
+	if absorb > dam:
 		now absorb is dam;
-	if absorb is greater than 0:
+	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease hp of the player by dam;
-	increase hp of player by absorb;
+	decrease HP of the player by dam;
+	increase HP of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 
@@ -198,7 +198,7 @@ Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Centaur Stallion" or bodyname of player is "Centaur Mare":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "     As your infection spreads within you, you find yourself drawn back to the open plains at the edge of the city. There, you seek out the other centaurs and join their herd. ";
 			if cocks of player > 0 and cunts of player > 0:
 				say "     As a herm centaur, you are popular among the other members of the herd and are often mounted by the stallions and sought out by the mares in heat. You happily have sex with them all, whinnying lustfully as you mate with them.";
@@ -211,5 +211,5 @@ when play ends:
 		else:
 			say "     Your unusual body makes modern life rather difficult for you, as most building, vehicles and even tools are not designed for a body as different as yours. You take to living a simpler, country life, making a comfortable home in a barn you buy and renovate with many modern conveniences. It is roomy and comfortable for someone like you and your home becomes envied by the few other tauric infected in the area, who start to emulate your example. Becoming friends with them, they provide you with a stable of various lovers to satisfy your lustful, equine passions.";
 
- 
-Centaur Stallion for FS ends here. 
+
+Centaur Stallion for FS ends here.

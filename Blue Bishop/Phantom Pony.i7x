@@ -12,7 +12,7 @@ Instead of conversing the Blot:
 to say blotlook:
 	project the figure of Blot_icon;
 	if blotintense is -1:
-		say "     Standing there quietly in a corner of the stall, the else rustic aesthetic of the area is clashed harshly against a seemingly cartoonish, inflatable horse toy. Looking it over closely, it seems relatively harmless, and it's 'purpose' is seemingly revealed by a lewdly placed hole between its hind legs.";
+		say "     Standing there quietly in a corner of the stall, the else rustic aesthetic of the area is clashed harshly against a seemingly cartoonish, inflatable horse toy. Looking it over closely, it seems relatively harmless, and its 'purpose' is seemingly revealed by a lewdly placed hole between its hind legs.";
 		say "     You're not sure why anyone would make such a thing -- assuming it isn't somehow the byproduct of this nanite plague -- as the seemingly flimsy thing couldn't possibly support the weight of an adult horse -- if it's meant as a standin for breeding. The tail of the toy is molded to be swept sideways, to ensure easy access, so it's clear it was designed to facilitate this purpose.";
 		say "     There seems to be the word 'Blot' crudely carved into the wood next to it, so you imagine that's what it's called. It's entirely possible someone left it in this room, since nobody seems to go back here. In any case, you could probably use it yourself for 'relief', but the way things are you have no idea what might happen if you do...";
 	else:
@@ -142,7 +142,7 @@ to say blotfuck:
 					else:
 						say "you feel the tainted material flood your cunt[sfn], pounding your hole[sfn] with a quickly-expanding, quickly-hardening series of distinctly ribbed implements.";
 					say "     Completely encased in the vinyl pony, there's no indication of your occupancy, save for your groans and lustful writhing[if cocks of player > 0], in addition to your exposed, throbbing cock[smn], enveloped in a sheath presented as though it were the toy's own[end if]. This wasn't the wisest thing to do, you imagine it'll take a lot of work to escape this predicament, if it's even possible by this point...";
-			wait for any key;
+			WaitLineBreak;
 			blotbind;
 			now lastfuck of Blot is turns;
 
@@ -156,7 +156,7 @@ to blotbind:
 	psycheeval;
 	libidoeval;
 	now lustatt is libido of player;
-	now calcnumber is -1;		
+	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
 		if clearnomore is 0, clear the screen;
@@ -183,10 +183,10 @@ to blotbind:
 			else:
 				say "     Losing yourself to your overwhelming need, trapped within this vinyl prison, the inflatable pony shows no relent in perpetually milking you.";
 			say "     Eventually, you completely lose track of time. From your limited vision through the toy's eyes, it's very apparent that nobody is aware of your ultimate fate, doomed to constant abuse by this tainted suit...";
-			wait for any key;
+			WaitLineBreak;
 			now bodyname of player is "Blotted";
 			now humanity of player is 0;
-			end the game saying "You are milked perpetually by the toy.";
+			end the story saying "You are milked perpetually by the toy.";
 			now trixieexit is 1;
 		else:
 			let k be 0;
@@ -212,13 +212,13 @@ to blotbind:
 					blotsanitypassive;
 					blotlust;
 				else:
-					say "      [if blotintense < 3]Easily[else if blotintense < 5]With relative ease[else if blotintense < 8]Eventually[else]Finally[end if], you manage to wrench yourself free and dismount the possessed toy,  [if blotintense < 3]though it quickly regresses to a state of complete inanimacy[else if blotintense < 5]gradually cooldoing down and becoming inanimate once more[else if blotintense < 8]quivering for a moment as it slowly begins to fill the void you left[else if blotintense < 10]the mess of a thing trembling in distress over its now-missing rider[else]the thing practically crawling over to be one with you once more, forcing you to retreat even further[end if].";
+					say "     [if blotintense < 3]Easily[else if blotintense < 5]With relative ease[else if blotintense < 8]Eventually[else]Finally[end if], you manage to wrench yourself free and dismount the possessed toy, [if blotintense < 3]though it quickly regresses to a state of complete inanimacy[else if blotintense < 5]gradually cooling down and becoming inanimate once more[else if blotintense < 8]quivering for a moment as it slowly begins to fill the void you left[else if blotintense < 10]the mess of a thing trembling in distress over its now-missing rider[else]the thing practically crawling over to be one with you once more, forcing you to retreat even further[end if].";
 					say "     You clean yourself off and prepare to go about your business once more. [if blotintense > 5]It's likely best that you leave the vinyl object alone until it 'cools down' a bit[else]The vinyl object seems relatively harmless, for now at least[end if]...";
 					say "[line break]";
 					cleanboundmemory;
-					wait for any key;
+					WaitLineBreak;
 					now trixieexit is 1;
-				wait for any key;
+				WaitLineBreak;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
 				say "[line break]";
@@ -238,7 +238,7 @@ to blotbind:
 					say "[line break]";
 					blotsanitypassive;
 					increase lustatt by 35 + (lustadjust * 5);] [Not needed, keeping just in case]
-				wait for any key;
+				WaitLineBreak;
 				next;
 			else:
 				now enduring is true;
@@ -266,7 +266,7 @@ to blotbind:
 					say "[line break]";
 					blotlust;
 					blotsanitypassive;
-				wait for any key;
+				WaitLineBreak;
 				next;
 
 to checkblotsegment:
@@ -330,7 +330,7 @@ to say blotbinddesc:
 		else:
 			say "relentlessly pounding your cunt[sfn][if anallevel is not 1] and ass[end if] with large and distinctly moulded implements";
 		say ". Barely able to see anything through the eyes of the thing as you're forced to fellate a large and intoxicating tendril, it's clearly reached the apex of its power! You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
-		
+
 to blotbindorgasm:
 	if blotintense < 3:
 		say "     Finally overtaken by bliss, your ";
@@ -373,7 +373,7 @@ to blotbindorgasm:
 			else:
 				say ". Warmth of your hot release awash against you, you feel it gradually flow into your maw through the rubbery tube, pumping its occupant with the slight excess";
 		else:
-			say "cunt[sfn] ache[sfv] against the toy, pounding vinyl milking you for as long as it can. Warmth of your hot honey awash against you, It seems compelled to make you taste your own juices, flooding your senses through the rubbery tube";
+			say "cunt[sfn] ache[sfv] against the toy, pounding vinyl milking you for as long as it can. Warmth of your hot honey awash against you, it seems compelled to make you taste your own juices, flooding your senses through the rubbery tube";
 		say ". Barely seeming to respond to your ecstasy, it's clear the thing has reached the apex of its purpose, seemingly more than happy to continue abusing its encased prisoner.";
 
 to blotlust:
@@ -401,9 +401,9 @@ to blotsanitypassive:
 	if blotintense > 9:
 		decrease humanity of player by (6 + (psycheadjust * 2)) / endureadj;
 	else if blotintense > 7:
-		decrease humanity of player by (4 + psycheadjust)  / endureadj;
+		decrease humanity of player by (4 + psycheadjust) / endureadj;
 	else if blotintense > 4:
-		decrease humanity of player by (3 + psycheadjust)  / endureadj;
+		decrease humanity of player by (3 + psycheadjust) / endureadj;
 	else if blotintense > 2:
 		let tempnum be (2 + psycheadjust);
 		if tempnum > 1 and enduring is true:
@@ -422,14 +422,14 @@ to blotsanityorgasm:
 	if blotintense > 9:
 		decrease humanity of player by (15 + (psycheadjust * 5)) / endureadj;
 	else if blotintense > 7:
-		decrease humanity of player by (9 + psycheadjust * 3)  / endureadj;
+		decrease humanity of player by (9 + psycheadjust * 3) / endureadj;
 	else if blotintense > 4:
-		decrease humanity of player by (7 + psycheadjust * 2)  / endureadj;
+		decrease humanity of player by (7 + psycheadjust * 2) / endureadj;
 	else if blotintense > 2:
-		decrease humanity of player by (5 + psycheadjust)  / endureadj;
+		decrease humanity of player by (5 + psycheadjust) / endureadj;
 	else:
-		decrease humanity of player by (3 + psycheadjust)  / endureadj;
-		
+		decrease humanity of player by (3 + psycheadjust) / endureadj;
+
 to say blotstrugglebar:
 	say "[close bracket]";
 	if blotintense > 9:

@@ -1,35 +1,42 @@
-Version 1 of Campus for FS by Rikaeus begins here.
+Version 1 of Tenvale College Campus by Rikaeus begins here.
 
 "Adds a college campus area w/adjoining sports venue for Flexible Survival"
 
-
 Section 1 - Event Locating the Campus
 
-Reaching the College is a situation.  The level of Reaching the College is 6.
+Reaching the College is a situation. The level of Reaching the College is 6.
 The sarea of Reaching the College is "Outside".
 
 Instead of Resolving a Reaching the College:
-	say "     Your meandering path through the city brings you into some new territory.  What was previously blockaded by monster activity and traffic accidents has been circumvented by following a few footpaths you'd missed earlier.  Exiting from one of these, you step into an area that's a little less densely packed and has some patches of green between the buildings.  Just as you're recogn-[line break]";
+	say "     Your meandering path through the city brings you into some new territory. What was previously blockaded by monster activity and traffic accidents has been circumvented by following a few footpaths you'd missed earlier. Exiting from one of these, you step into an area that's a little less densely packed and has some patches of green between the buildings. Just as you're recogn-[line break]";
 	say "     'Think fast!' comes the yell from one side and you turn to see a brown blur flying at you!";
 	WaitLineBreak;
 	let bonus be (( perception of player + dexterity of player minus 20 ) divided by 2 );
 	let dice be a random number from 1 to 20;
 	say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 	if bonus + dice > 20:
-		say "You quickly snatch the flying football from the air with both hands before it can bash you in the head.  It was a very powerful throw, but you manage to hold on and quickly tuck the ball to your chest.  'Nice catch,' someone calls you.  'Over here, I'm open.'  Looking up, you spot a pack of gorillas in football gear charging at you, some running, but most moving on all fours.  Looking over at the one who called out, you see him and another gorilla moving in fast outside of his line of sight.  You signal with a quick tilt of your head and then throw the ball off to his right, outside of the would-be interceptor's reach.  Snagging the ball, the player makes a run for it with the ball cradled to his chest.  The others, seeing the completed pass, turn and charge after him, saving you from getting trampled.";
+		say "     You quickly snatch the flying football from the air with both hands before it can bash you in the head. It was a very powerful throw, but you manage to hold on and quickly tuck the ball to your chest. 'Nice catch,' someone calls you. 'Over here, I'm open.'  Looking up, you spot a pack of gorillas in football gear charging at you, some running, but most moving on all fours. Looking over at the one who called out, you see him and another gorilla moving in fast outside of his line of sight. You signal with a quick tilt of your head and then throw the ball off to his right, outside of the would-be interceptor's reach. Snagging the ball, the player makes a run for it with the ball cradled to his chest. The others, seeing the completed pass, turn and charge after him, saving you from getting trampled.";
+		LineBreak;
+		say "[bold type]Your score increases by 20![roman type][line break]";
 		increase score by 20;
 		say "     Leaning against one of the buildings, you watch the gorilla football players running around the corner then take a look around again.";
-	otherwise if bonus + dice >= 14:
-		say "You are startled, but manage a few quick steps back to catch the football in your arms.  It was a very powerful throw that leaves you a little winded from the force of it, but you've got it.  Looking up, you spot a pack of gorillas in football gear charging at you, some running, but most moving on all fours.  'Over here, man,' comes the cry from one side and you spot another gorilla there with his arms up.  'I'm open,' he says.  You toss it to him only to have another speedy primate leap in front and body check him to the side to steal the ball.  Holding it in one meaty, hand-like foot, he charges off in a new direction with it.  The group turns quickly and charges off after the ball, saving you from getting trampled.";
+	else if bonus + dice >= 14:
+		say "     You are startled, but manage a few quick steps back to catch the football in your arms. It was a very powerful throw that leaves you a little winded from the force of it, but you've got it. Looking up, you spot a pack of gorillas in football gear charging at you, some running, but most moving on all fours. 'Over here, man,' comes the cry from one side and you spot another gorilla there with his arms up. 'I'm open,' he says. You toss it to him only to have another speedy primate leap in front and body check him to the side to steal the ball. Holding it in one meaty, hand-like foot, he charges off in a new direction with it. The group turns quickly and charges off after the ball, saving you from getting trampled.";
+		LineBreak;
+		say "[bold type]Your score increases by 5![roman type][line break]";
 		increase score by 5;
 		say "     Leaning against one of the buildings, you watch the gorilla football players running around the corner then take a look around again";
-	otherwise:
-		say "You don't react in time and the football strikes you rather hard in the head, then bounces off.  'Aww man, fumbled,' the same, burly voice cries before there is a heavy thundering.  As your vision is just starting to clear, you get bowled over and trampled by a pack of gorillas in football uniforms chasing after their ball.  Their big, heavy hands and feet stomp over you, ignoring you in an attempt to complete the play.  By the time you manage to get up after that rough treatment, you can see them continuing on, one of them throwing a pass to someone else around the corner, restarting the whole thing.";
+	else:
+		say "     You don't react in time and the football strikes you rather hard in the head, then bounces off. 'Aww man, fumbled,' the same, burly voice cries before there is a heavy thundering. As your vision is just starting to clear, you get bowled over and trampled by a pack of gorillas in football uniforms chasing after their ball. Their big, heavy hands and feet stomp over you, ignoring you in an attempt to complete the play. By the time you manage to get up after that rough treatment, you can see them continuing on, one of them throwing a pass to someone else around the corner, restarting the whole thing.";
+		LineBreak;
+		say "[bold type]Your score decreases by 10![roman type][line break]";
 		decrease score by 10;
+		say "[bold type]Your sanity decreases by 5![roman type][line break]";
 		decrease humanity of player by 5;
-		now hp of player is 1;
+		say "[bold type]You are reduced to 1 HP![roman type][line break]";
+		now HP of player is 1;
 		say "     Trying your best to ignore your aches, you lean against one of the buildings and look around again. ";
-	say "     Your travels have lead you to the city's college campus.  Built beside a major sporting arena, the college's main focus is its sports program, though there are other programs and classes available, you recall.  While you never attended college here, you know they have several teams, including football, baseball, track and field and many others.  And if those big gorillas are any indication, it looks like there'll be plenty of powerful creatures running around here.";
+	say "     Your travels have lead you to the city's college campus. Built beside a major sporting arena, the college's main focus is its sports program, though there are other programs and classes available, you recall. While you never attended college here, you know they have several teams, including football, baseball, track and field and many others. And if those big gorillas are any indication, it looks like there'll be plenty of powerful creatures running around here.";
 	move the player to the College Campus Entrance;
 	now battleground is "void";
 	now College Campus Entrance is known;
@@ -39,7 +46,8 @@ Instead of Resolving a Reaching the College:
 Section 2 - Tenvale College Campus
 
 
-College Campus Entrance is a room. It is fasttravel.  It is private.
+College Campus Entrance is a room. It is fasttravel. It is private.
+earea of College Campus Entrance is "Campus".
 
 The description of College Campus Entrance is "[campusdesc]".
 
@@ -62,13 +70,15 @@ Southwest of Dorm Street is College Walkway East.
 Northwest of Greek Street is College Walkway East.
 Southeast of College Walkway Northeast is College Walkway East.
 The description of College Walkway East is "[campuseastdesc]".
+earea of College Walkway East is "Campus".
 
 to say campuseastdesc:
 	say "     The pathway you're on is rather well kept for a campus during a nanite apocalypse. Sure, there's stray pieces of clothing but it looks like someone mows the grass regularly. Nevertheless though the place still smells like sex, which is to be expected. To your west you see the entrance to Tenvale College with its parking lots and everything. To your southeast you see frats in the distance and upon closer examination spot a sign that says 'Greek Street'. You muse that it's aptly named. To the northeast is a different set of buildings, specifically what looks to be the housing district. Just like the fraternities, it too has a justifiable name, 'Dorm Street'. Lastly, to your northwest you spot another pathway that leads somewhere else.";
 
 [Room Declaration]
 Southeast of College Walkway East is Greek Street.
-The description of Frat Street is "[greekdesc]".
+The description of Greek Street is "[greekdesc]".
+earea of Greek Street is "Campus".
 
 to say greekdesc:
 	say "     As suspected of a street with nothing but fraternities and sororities it is littered with cups, underwear, panties, and all sorts of trash. Beyond that you can also spot a few people passed out drunk on the grass in front of a lot of the buildings. While you'd love to explore all the various sororities and fraternities, you have no clue which ones are safe to enter. So, personally you feel that it is better for you to have a look around the campus to see if you can find information on the various groups at the college.";
@@ -76,6 +86,7 @@ to say greekdesc:
 [Room Declaration]
 Northeast of College Walkway East is Dorm Street.
 The description of Dorm Street is "[dormstreetdesc]".
+earea of Dorm Street is "Campus".
 
 to say dormstreetdesc:
 	say "     The first thing that catches your eye as you approach the strip of road that holds the student housing is the sign itself. It appears that someone has tried to scratch out the r in dorm so as to make it say Dom, something that makes you chuckle out loud before you direct your attention elsewhere. Compared to the rest of the campus, Dorm Street is a lot cleaner, only noticing maybe one or two pieces of stray clothing on the grass. The only building here that catches your attention is to your east, a dorm that seems to be lived in, if the lights in the windows say anything. If you wish to leave the area, you could always head back southwest, back to the walkway you came in from.";
@@ -105,10 +116,11 @@ North of College Campus Entrance is College Fountain.
 South of College Administration Building is College Fountain.
 West of College Walkway Northeast is College Fountain.
 East of College Walkway Northwest is College Fountain.
-The description of College Fountain is "[fountaindesc]"
+The description of College Fountain is "[fountaindesc]".
+earea of College Fountain is "Campus".
 
 to say fountaindesc:
-	say "      The fountain area appears to be a bustling center of activity. There is quite a number of people hanging out at the center of the campus. While there is one or two couples having sex out in the open, most of the people are just sitting and chatting with their friends. The fountain itself has random gunk in it but it looks like the campus staff clean it on a daily basis, if the person with the uniform and bucket says anything. Overall the location appears to be a nice place to spend time with your friends or have a romantic date.";
+	say "     The fountain area appears to be a bustling center of activity. There is quite a number of people hanging out at the center of the campus. While there is one or two couples having sex out in the open, most of the people are just sitting and chatting with their friends. The fountain itself has random gunk in it but it looks like the campus staff clean it on a daily basis, if the person with the uniform and bucket says anything. Overall the location appears to be a nice place to spend time with your friends or have a romantic date.";
 
 [Room Declaration]
 North of College Fountain is College Administration Building.
@@ -129,11 +141,12 @@ to say DeanDesc:
 
 [Room Declaration]
 Northwest of College Campus Entrance is College Walkway Northwest.
-Southeast of of College Belltower is College Walkway Northwest.
+Southeast of College Belltower is College Walkway Northwest.
 West of College Fountain is College Walkway Northwest.
 Southwest of College Administration Building is College Walkway Northwest.
 Northeast of College Walkway West is College Walkway Northwest.
 The description of College Walkway Northwest is "[campusnorthwestdesc]".
+earea of College Walkway Northwest is "Campus".
 
 to say campusnorthwestdesc:
 	say "     The pathway you're on at the moment is littered with boxers and panties as well as wet spots that you swear is cum stains. If you didn't know better you'd think that there had been an orgy on this walkway. Ignoring the disarray of the area itself you take a look around. You can see to your east the fountain where in the distance you notice people hanging out. To the northeast is the Administration Building where people can go to register. Lastly to the northwest is the belltower of the college. Lastly, to your southeast is the college's entrance.";
@@ -151,6 +164,7 @@ West of College Campus Entrance is College Walkway West.
 Southeast of Lecture Street is College Walkway West.
 Northeast of Athletic Street is College Walkway West.
 The description of College Walkway West is "[campuswestdesc]".
+earea of College Walkway West is "Campus".
 
 to say campuswestdesc:
 	say "     The concrete walkway is not as messy as the others in the sense of clothes everywhere. Rather instead there appears to be a lot of different sports equipment all over the place as well as some people who look to be studying with their friends. The explanation for this is very much straightforward. For one, to the southwest is the location of the athletic departments, which is marked by a sign reading 'Athletic Street'. In the distance you can see many people practicing sports but you are not close enough to see exactly what. Secondly, to the northwest is the location of all the lecture halls, the street aptly named 'Lecture Street'. If you wished to go elsewhere then you can either head northeast to another walkway or east to the campus entrance.";
@@ -158,6 +172,7 @@ to say campuswestdesc:
 [Room Declaration]
 Southwest of College Walkway West is Athletic Street.
 The description of Athletic Street is "[athleticstreetdesc]".
+earea of Athletic Street is "Campus".
 
 to say athleticstreetdesc:
 	say "     The street that holds the athletic departments has multiple groups of people excercising from the archery club to the football team to the soccer team. There are multiple buildings all over the place but you're not entirely sure where to go. It may be best to look around the campus for members of the various teams and see if you can gain information about the various members that way. After all you don't think you'd want to accidentally walk into an area while people are practicing and possibly get tackled to the ground.";
@@ -165,6 +180,7 @@ to say athleticstreetdesc:
 [Room Declaration]
 Northwest of College Walkway West is Lecture Street.
 The description of Lecture Street is "[lecturestreetdesc]".
+earea of Lecture Street is "Campus".
 
 to say lecturestreetdesc:
 	say "     The Lecture Street looks to be the cleanest outside part of the campus by far. There is absolutely no lost clothing, no cum stains, nor anybody fucking like rabbits on the lawn. Rather, the area appears to solely be for the students to hang out and study or go to class. Although, despite that, it is difficult to tell which lecture hall teaches what, so it'd be best if you looked around campus for other students in order to figure out where to go. It may also help to possibly enroll at some point for other classes.";
@@ -186,13 +202,14 @@ to say tenvalelibrarydesc:
 
 [Room Declaration]
 Northeast of College Campus Entrance is Campus Walkway Northeast.
-East of Campus Fountain is Campus Walkway Northeast.
+East of College Fountain is Campus Walkway Northeast.
 Southeast of College Administration Building is Campus Walkway Northeast.
 Northwest of College Walkway East is Campus Walkway Northeast.
 Southwest of Tenvale College Library is Campus Walkway Northeast.
 The description of Campus Walkway Northeast is "[campusnortheastdesc]".
+earea of Campus Walkway Northeast is "Campus".
 
 to say campusnortheastdesc:
 	say "     The walkway is clean but not completely, with stray pieces of clothing. Due to the area being close to the library, which is northeast of here, there are many people who are reading books, or using them to study out in the nice weather. Of course, on top of that you can spot some soon-to-be students filling out admissions paperwork on the grass, as the administrations building is northwest of here. To your west you can hear running water, which you expect to be the fountain. To the southeast is another pathway while to the southwest is the entrance to the college.";
 
-Campus for FS ends here.
+Tenvale College Campus ends here.

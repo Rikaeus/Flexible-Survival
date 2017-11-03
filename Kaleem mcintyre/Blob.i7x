@@ -1,6 +1,6 @@
 Blob by Kaleem mcintyre begins here.
 
-"Adds a Blob creature to Flexible Survival Reservoir" 
+"Adds a Blob creature to Flexible Survival Reservoir"
 
 
 Section 1 - Monster Responses
@@ -21,13 +21,13 @@ to say losetoBlob:
 
 
 to say beattheBlob:
-	say "Having fought the creature enough to wear it down, not to mention draw its attention to you rather than the main control terminal, the Blob is quick to solidify icily as the reservoir freezes to close to below 0. Now much smaller than it had been in the beginning, the amorphous creature seems almost harmless as it sits there both [italic type]still[roman type] and compliant before you. However, knowing that this might not be true when the reservoir heats back up, you don't wait as you charge for the creature again and then slam into it with a vicious kick. When you flip back from you attack you watch as tiny splinters in the shell of the creature appear like cracks on a frozen pond about to break. Moving back a little further you watch in fascination as the monster's body fragments more and more until finally exploding into crystalline shards."; 
+	say "Having fought the creature enough to wear it down, not to mention draw its attention to you rather than the main control terminal, the Blob is quick to solidify icily as the reservoir freezes to close to below 0. Now much smaller than it had been in the beginning, the amorphous creature seems almost harmless as it sits there both [italic type]still[roman type] and compliant before you. However, knowing that this might not be true when the reservoir heats back up, you don't wait as you charge for the creature again and then slam into it with a vicious kick. When you flip back from you attack you watch as tiny splinters in the shell of the creature appear like cracks on a frozen pond about to break. Moving back a little further you watch in fascination as the monster's body fragments more and more until finally exploding into crystalline shards.";
 
 
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -54,7 +54,7 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 0;
 	now sex entry is "nochange"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 180; [ The monster's starting hit points. ]
+	now HP entry is 180; [ The monster's starting HP. ]
 	now lev entry is 18; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 25; [ Monster's average damage when attacking. ]
 	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]

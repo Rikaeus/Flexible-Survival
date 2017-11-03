@@ -18,7 +18,7 @@ Instead of resolving a Hanu:
 		if libido of player < 0, now libido of player is 0;
 		increase humanity of player by 20;
 		if humanity of player > 100, now humanity of player is 100;
-		Increase maxhp of player by 5;
+		Increase maxHP of player by 5;
 		Increase score by 5;
 	else:
 		LineBreak;
@@ -28,8 +28,8 @@ Instead of resolving a Hanu:
 
 Section 2 - Mysterious
 
-Clotho is a situation. 
-The sarea of Clotho is "Red". 
+Clotho is a situation.
+The sarea of Clotho is "Red".
 Atropis is resolved;
 
 Instead of resolving a Clotho:
@@ -41,9 +41,9 @@ Instead of resolving a Clotho:
 	Now Atropis is unresolved;
 
 
-Section 3 - Crone 
+Section 3 - Crone
 
-Atropis is a situation. 
+Atropis is a situation.
 The sarea of Atropis is "High".
 
 Instead of resolving Atropis:
@@ -81,8 +81,8 @@ Instead of resolving a The Cap:
 	If player consents:
 		LineBreak;
 		Say "Telling the Cerberus that you were just browsing you chuckle nervously before slowly setting the statue back into the case. Seeing that you're not here to steal the Cerberus comes over, hefts you up by your collar and then casually walks you out of the Museum. When the beast tosses you out onto your head you get the feeling that would-be thieves are not wanted inside of the Museum. You make a mental note to yourself that you're going to avoid that particular case for now on. Right after you get an ice pack for the headache growing inside of your noggin'.";
-		Decrease hp of player by 6;
-		If hp of player < 1, now hp of player is 1;
+		Decrease HP of player by 6;
+		If HP of player < 1, now HP of player is 1;
 	else:
 		LineBreak;
 		Say "Not knowing why you tug the statue tight into your chest and then chuckle nervously up at the three headed guard dog before darting out the backside of the room.";
@@ -90,7 +90,7 @@ Instead of resolving a The Cap:
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll is greater than 14:
+		if diceroll > 14:
 			say "Running as fast as your [bodyname of player] feet can take you, you rush through the narrow twist and turns of the Museum's hallways and then out of the rear entrance of the building, leaving your three-headed pursuer confusedly trying to follow after your scent. Moving down the alleyway and then on your way back to the bunker you accidentally [one of]trip over the side of the curb[or]slip on a can[or]slip over something hard[or]get your feet tangled over a discarded pair of pants[at random] and end up accidentally dropping the statue you're holding onto.";
 			say "Cursing your luck you watch as the falcon headed artifact sails through the air and then crashes onto the ground, breaking into a hundred different pieces. Sighing at the loss, even though you don't understand why, you find yourself gaping in awe as you look to see a bright red... baseball cap... lying admits the rubble of the statue. Finding your balance you cautiously step over to the cap and then reach down to pick up the headwear. If things weren't already weird enough as they are you find that the cap bears the first letter of your name.";
 			say "Not sure you understand what's going on, you shrug and then flip the headwear onto your head. Seeing that the baseball cap is a perfect fit you step over the ruined statue and then head off onto your way. You never notice how the letter on the hat spark for a second, as you can feel nothing out of place on top of your head, before going silent.";
@@ -120,11 +120,11 @@ Section 5 - Fashion Statement
 
 fashionfight is a number that varies.
 
-Fashion statement is a situation. 
+Fashion statement is a situation.
 The sarea of Fashion Statement is "Campus".
 
 Instead of resolving a Fashion Statement:
-	say "Wandering through the commercial area at the edge of the campus, you happen to come across a clothing store that looks as though it's just recently been ransacked. Mildly curious to know if anything has survived the mercilessness carnage you meander inside of the store on a whim. Looking around you find the pervasive funk of musk, both male and female, as well as mildew covered shelves, dried stains, glass littering the floor and assorted items tossed around rather appealing."; 	
+	say "Wandering through the commercial area at the edge of the campus, you happen to come across a clothing store that looks as though it's just recently been ransacked. Mildly curious to know if anything has survived the mercilessness carnage you meander inside of the store on a whim. Looking around you find the pervasive funk of musk, both male and female, as well as mildew covered shelves, dried stains, glass littering the floor and assorted items tossed around rather appealing.";
 	say "However, considering the state of the world you don't really expect too much. That is, until you make your way to the back of the store and into the stockroom. Interesting enough this part of the store seems to have been kept in tack. Maybe there's something salvageable here?";
 	say "     [bold type]Should you check to see?[roman type][line break]";
 	LineBreak;
@@ -155,7 +155,7 @@ Instead of resolving a Fashion Statement:
 			if "Scavenger" is listed in feats of the player:
 				increase bonus by 4;
 			say "You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
-			if dice + bonus is greater than 15:
+			if dice + bonus > 15:
 				say "Scrounging up whatever you could you finally manage to find something worth wearing from the leftover inventory back here. Giving the apparel a quick a sniff, just to make sure it's not tainted, you smile approvingly before stuffing the items in question into your backpack. Time to head for home!";
 				now carried of muscle shirt is 1;
 				increase score by 5;
@@ -167,7 +167,7 @@ Instead of resolving a Fashion Statement:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
-				if the player consents:	
+				if the player consents:
 					LineBreak;
 					say "If at first you don't succeed, you mumble underneath your breath while going continuing to look around.";
 					follow the turnpass rule;
@@ -183,7 +183,7 @@ Instead of resolving a Fashion Statement:
 		LineBreak;
 		say "Feeling as though this would be too much trouble you shake your head before turning to go about your business.";
 		now Fashion Statement is resolved;
- 
+
 
 Section 9 - Table of Game Objects
 
@@ -191,15 +191,15 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "muscle shirt"	"A tight fitting pair of pants with a black mesh muscle shirt to go along with it."	3	muscle shirt
 
-muscle shirt is equipment. 
-muscle shirt is not temporary. 
-The placement of muscle shirt is "body". 
+muscle shirt is equipment.
+muscle shirt is not temporary.
+The placement of muscle shirt is "body".
 The descmod of muscle shirt is "A sexy black muscle shirt and waist hugging pair of pants have been slipped over your body.".
 The slot of muscle shirt is "body".
 
 Instead of smelling muscle shirt:
 	say "The muscle shirt and pants smells like musk and pheromones from long hours of working out.";
-	
+
 
 Section 9a - Red Cap
 
@@ -207,11 +207,11 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "red cap"	"A red baseball cap with the letter of your first name printed onto it."	1	red cap
 
-Red cap is equipment. 
-Red cap is not temporary. 
+Red cap is equipment.
+Red cap is not temporary.
 The AC of red cap is 10.
-The effectiveness of red cap is 40. 
-The placement of red cap is "face". 
+The effectiveness of red cap is 40.
+The placement of red cap is "face".
 The descmod of red cap is "A somewhat extraordinary red baseball cap rests atop your head.".
 The slot of red cap is "head".
 
@@ -225,11 +225,11 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "silver dress"	"A flowing silver dress that looks to be about your size. Glass slippers not included."	1	silver dress
 
-Silver dress is equipment. 
-Silver dress is not temporary. 
+Silver dress is equipment.
+Silver dress is not temporary.
 The AC of silver dress is 10.
-The effectiveness of silver dress is 40. 
-The placement of silver dress is "body". 
+The effectiveness of silver dress is 40.
+The placement of silver dress is "body".
 The descmod of silver dress is "A sparkling silver dress rests over your body.".
 The slot of silver dress is "body".
 

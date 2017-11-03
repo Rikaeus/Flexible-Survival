@@ -220,20 +220,20 @@ carry out destinationcheck:
 			say "| [link][bracket]Master's Office[close bracket][as]nav Master's Office[end link] ";
 		LineBreak;
 	[start of the college area]
-	if College Campus is known or Campus Gym is known or Paleontology Office is known or Phi Iota Gamma is known or Sports Arena Lockerroom is known or Astroslide Field Lockerroom is known:
+	if College Campus is known or Campus Gym is known or Paleontology Office is known or Phi Iota Gamma is known or Astroslide Football Field is known:
 		say "[bold type]Tenvale College[roman type]: ";
 		if College Campus is known:
 			say "[link][bracket]College Campus[close bracket][as]nav College Campus[end link] - ";
-		if Astroslide Field Lockerroom is known:
-			say "| [link][bracket]Astroslide Field Lockerroom[close bracket][as]nav Astroslide Field Lockerroom[end link] ";
+		if Astroslide Field Locker-room is known:
+			say "| [link][bracket]Astroslide Field Locker-room[close bracket][as]nav Astroslide Field Locker-room[end link] ";
 		if Campus Gym is known:
 			say "| [link][bracket]Campus Gym[close bracket][as]nav Campus Gym[end link] ";
 		if Paleontology Office is known:
 			say "| [link][bracket]Paleontology Office[close bracket][as]nav Paleontology Office[end link] ";
 		if Phi Iota Gamma is known:
 			say "| [link][bracket]Phi Iota Gamma[close bracket][as]nav Phi Iota Gamma[end link] ";
-		if Sports Arena Lockerroom is known:
-			say "| [link][bracket]Sports Arena Lockerroom[close bracket][as]nav Sports Arena Lockerroom[end link] ";
+		if Astroslide Football Field is known:
+			say "| [link][bracket]Astroslide Football Field[close bracket][as]nav Astroslide Football Field[end link] ";
 		LineBreak;
 	[start of the forest area]
 	if Urban Forest is known or Bunny House is known or Happy Puppy Kennel is known:
@@ -270,7 +270,6 @@ carry out destinationcheck:
 			say "| [link][bracket]Tiger den[close bracket][as]nav Tiger den[end link] ";
 		LineBreak;
 
-
 navigating is an action applying to one thing.
 
 understand "navigate [any known fasttravel room]" as navigating.
@@ -290,7 +289,7 @@ carry out navigating:
 		stop the action;
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
 	now battleground is "Outside";
-	if a random number from 1 to 20 is less than 10 minus bonus and battleground is not "void":
+	if a random number from 1 to 20 < 10 minus bonus and battleground is not "void":
 		if there is a area of Battleground in the table of random critters:
 			Fight;
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
@@ -298,12 +297,13 @@ carry out navigating:
 				Fight;
 	else:
 		say "You travel to [the noun], avoiding trouble as best you can.";
-	if hp of Velos > 2, move Velos to the noun;
+	if HP of Velos > 2, move Velos to the noun;
 	move the player to the noun;
+	project the figure of pixel_icon;
 	follow turnpass rule;
-		
+
 NavCheckReturn is a truth state that varies.
-	
+
 to say NavCheck (CheckRoom - a room): [check if a nav attempt can go through]
 	if debugactive is 1:
 		say "DEBUG -> NavCheck just checked your travel route out! <- DEBUG";
@@ -317,5 +317,5 @@ to say NavCheck (CheckRoom - a room): [check if a nav attempt can go through]
 		if debugactive is 1:
 			say "DEBUG -> ...and you may travel. Pass along now. <- DEBUG";
 		now NavCheckReturn is true;
-
+		
 Navigation ends here.

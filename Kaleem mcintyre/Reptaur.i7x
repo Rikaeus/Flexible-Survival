@@ -181,7 +181,7 @@ to say beattheReptaur:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -191,13 +191,13 @@ When Play begins:
 	now defeated entry is "[beattheReptaur]"; [ Text when monster loses.  Change 'Reptaur' as above. ]
 	now victory entry is "[losetoReptaur]"; [ Text when monster wins.  Change 'Reptaur' as above. ]
 	now desc entry is "[Reptaurdesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "smooth and blunted with a somewhat rounded muzzle making up the end of your face. The shape of said muzzle just so happens to hinder you from smelling much of anything, however, you new serpentine tongue takes care of that small detail by [italic type]tasting[roman type] all the scents in the air around you"; [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "smooth and blunted with a somewhat rounded muzzle making up the end of your face. The shape of said muzzle just so happens to hinder you from smelling much of anything. However, you new serpentine tongue takes care of that small detail by [italic type]tasting[roman type] all the scents in the air around you"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "strangely mixed between that of an ungulate, a serpent, and a man. Like the centaurs of old you have the lower body of a horse, but instead of your lower end being lightly furred its smooth all over while your feet end with four digitigrade paws fitted with sharp claws instead of hooves. Your upper body is mixed between that or a serpent's and a man's as you possess two strong, but smooth arms, with muscles for days covering both your chest and back"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "bright greenish-blue scales that seem to glow almost teal in the right light"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have a six foot long, two and a half foot wide tail that ends at a rounded tip, much like a rattlesnake's."; [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "reptilian"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "your hair begins to fall out while your muzzle rounds out to become somewhat blunted at the point where your nose should meet your face. As your eyes narrow into almond-like slits your two eyeteeth elongated into wickedly sharp fangs while your tongue narrows down to become almost whip thin"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your bones shift and flex underneath your skin as your backside stretches out behind you to give you an extra pair of legs. If things were already odd the hairs on your body begin to fall off while your skin slowly becomes smooth all over. Of course, to top things off, you're not prepared for vertigo to overtake you as your new feet help to lift you up while at the same moment you [']original['] legs begin to thicken with extra muscle. Your torso, chest, and arms are not spared from this new changes as extra added growth surges throughout your upper body helping it to offset your newly made taurian backside as the organs inside of your body work  to rearrange themselves"; [ Body TF text, format as "Your body feels funny as (your text)." ]
+	now body change entry is "your bones shift and flex underneath your skin as your backside stretches out behind you to give you an extra pair of legs. If things were already odd the hairs on your body begin to fall off while your skin slowly becomes smooth all over. Of course, to top things off, you're not prepared for vertigo to overtake you as your new feet help to lift you up while at the same moment you [']original['] legs begin to thicken with extra muscle. Your torso, chest, and arms are not spared from this new changes as extra added growth surges throughout your upper body helping it to offset your newly made taurian backside as the organs inside of your body work to rearrange themselves"; [ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "your flesh starts to harden, the beginnings of your scales coming in, while at the same time your skin changes its pigmentation to become almost teal-like colour"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your lower backside begins to stretch out as your spine lengthens to cover the split of your ass. Crazy as this is, this is almost nothing compared to your glutes swelling out from your body, giving you a perfect bubble-like rump, as your new tail thickens and stretches out to almost match the length of your entire form"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "the mass of flesh thickens and then rounds at the head while growing several ridges along the upper length"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
@@ -208,7 +208,7 @@ When Play begins:
 	now int entry is 18;
 	now cha entry is 23;
 	now sex entry is "Both"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 89; [ The monster's starting hit points. ]
+	now HP entry is 89; [ The monster's starting HP. ]
 	now lev entry is 15; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 15; [ Monster's average damage when attacking. ]
 	now area entry is "Park"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
@@ -218,7 +218,7 @@ When Play begins:
 	now breasts entry is 0; [ Number of breasts the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is  1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 12; [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 55; [ Target libido the infection will rise towards. ]
@@ -253,12 +253,12 @@ this is the rtaurpounce rule:		[double-damage pouncing]
 	say "The [one of][name entry][or]reptile[or]reptilian taur[or]reptilian creature[purely at random] knocks you to the ground and pounces atop you quickly, stomping you repeatedly with its clawed feet in an attempt to knock the resistance out of you.  This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield while pinned]
-	if absorb is greater than dam:
+	if absorb > dam:
 		now absorb is dam;
-	if absorb is greater than 0:
+	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease hp of the player by dam;
-	increase hp of player by absorb;
+	decrease HP of the player by dam;
+	increase HP of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 
@@ -267,7 +267,7 @@ this is the rtaurpounce rule:		[double-damage pouncing]
 
 when play ends:
 	if bodyname of player is "Reptaur":
-		if humanity of player is less than 10:
+		if humanity of player < 10:
 			say "Falling prey to the Reptaur strain of infect you find yourself losing control over your senses. Instinctively heading deep into the city to become lost amongst your feral kin who roam the park area you find the rest of your days becoming much a blur as you feed, and fuck and fight any who decide to harm the little patch you've made for yourself. The small herd of other Reptaur's that become something like your family make up the difference for whatever emotional needs you may require and as for the sex... well that's never in small demand. Especially when you and your kin begin capturing lonesome soldiers who end up straying too far from their post to [italic type]blow off a little steam[roman type].";
 		else:
 			say "Surviving the crisis plaguing the city you wind up being captu-rescued by the military and then taken to one of their quarantine facilities to be experime-checked over by the helpful men in camouflage fatigues. Days of winding up being poked and prodded and else made into a part-time lab rat has your temper reaching almost dangerous levels as you threaten to blow up at the doctors and scientist on duty. However, right before you go ballistic you end up being released back out into the world at the behest of a certain doctor that just so happens to be mutant friendly. Thrown back out into the world you slowly come to realize that there's not much keeping you here in the city anymore and at that point you are quick to pack up what little things you have in order to head for new horizons awaiting you out there in the big world.";
@@ -278,7 +278,7 @@ when play ends:
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "Being dominantly female in gender you find yourself being drawn by your maternal instincts to a small outreach center responsible for the upkeep and education of both mutant and human teens. The organization that supports the center is shadier than the mafia but, with the female centaur and her cohorts working to maintain order for the facility certain... unsavory elements... end up being removed from having any interactions with the young ones. Its only after seeing the centaur, whose name is Debra, kicking out several men in suits that claimed that they wanted to have a look in on the children to check on their progress, with the aid of yourself and some of her other companions, that you find yourself being intimately drawn to the other woman.[line break]";
 				say "Of course, being the professional woman that she is, Debra makes it clear that her focus is on the children and that any sexual practices get handled when she's well off duty. This turns out to be something you come to respect, though grudgingly so since you have to come in to work every day knowing what you can never have, however over the months that pass your feelings slowly turn themselves towards a new prospect in the form of Libby, a herm Equitaur, whose morals are a little bit shakier, but her resolve to do right by the teenagers at the center no less resolute. Finding a lover and companion in Libby turns out to be much better for you than being with Debra, right up until you find your belly swelling with the Equitaur herms clutch after about ten days into your sexual relationship. Least to say, you and Libby manage to make the center just a little more [italic type]prosperous[roman type] as you add several of your equine-reptaur foals into the mix with the other children.[line break]";
-				say "Debra takes a deaf ear to how all of your children call her Aunt Deb, but whenever you catch the centauress' tail swaying leisurely behind her back whenever she thinks no one is looking, you get a good feeling that she likes the new title.";
+				say "Debra takes a deaf ear to how all of your children call her Aunt Deb, but whenever you catch the centauress's tail swaying leisurely behind her back whenever she thinks no one is looking, you get a good feeling that she likes the new title.";
 			else:									[F-STERILE]
 				say "After leaving the city you find yourself drifting around for a while, going back and forth between place to place until you finally find yourself settling in a little provincial town in the middle of bumfuck nowhere. With a population of a hundred and it doesn't take you long to settle in, especially being one of the few mutants in the place, but it does take you a little while longer to get over the lonesomeness of not having much in common with the rest of the townsfolk. The children seem to like you though as they often want to ride on your back during your days off from work at the mayor's office. Its only when more [italic type]new blood[roman type] comes into the place, some weeks after your arrival, in the form of mutants looking to get away from the world that things begin to change.[line break]";
 				say "The local mayor, who likes he was there during Noah's Flood, elects you as the deputy mayor to take care of these newcomers and soon you find yourself wrapped up in situating everybody into a new place and then bridging the social gap between the humans and mutants. Not having much experience with this sort of thing the wolftaur brothers that come into town a few days later are quick to aid you in your endeavors as they work to expand the town for more incoming outsiders. Their plans to build up new housing complexes spurn the mayor to making some calls and asking for a few favors to get the money necessary to have said buildings put into place.[line break]";

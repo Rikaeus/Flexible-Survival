@@ -34,7 +34,7 @@ Omiotalk is a number that varies.
 omq is a number that varies.
 
 Omio is a woman.
-The description of Omio is "Humming to herself while puttering around the main room of her home is the strawberry redhead you met on the plains earlier. Five foot five inches tall, with golden eyes and  a blue Chinese-like dress that covers her frame from neck down to her feet, the human-like woman mutters to herself while walking around doing this, that or the other. Her skin is tanned giving her the appearance of someone who is probably native to a southern island somewhere below the equator. Her face is somewhat sharp with clearly defined angles, yet instead of making her seem manly these lines make her more... cute in a girlish like way.".
+The description of Omio is "Humming to herself while puttering around the main room of her home is the strawberry redhead you met on the plains earlier. Five foot five inches tall, with golden eyes and a blue Chinese-like dress that covers her frame from neck down to her feet, the human-like woman mutters to herself while walking around doing this, that or the other. Her skin is tanned giving her the appearance of someone who is probably native to a southern island somewhere below the equator. Her face is somewhat sharp with clearly defined angles, yet instead of making her seem manly these lines make her more... cute in a girlish like way.".
 The conversation of Omio is { "Research and Development!" }.
 
 instead of linkactioning Omio:
@@ -55,7 +55,7 @@ instead of conversing the Omio:
 		say "     ([link]N[as]n[end link]) - No.";
 		If player consents:
 			LineBreak;
-			say "Omio yaks to you about this and that before smiling imploringly. You kinda get the feeling that she's really lonely. 'Oh one thing before you go.' Turning you look to the  woman and then quirk and eyebrow. 'I do hope you'll consider my request and decide to assist me with my research.  It is important.'  You nod and politely say you'll think about it.";
+			say "Omio yaks to you about this and that before smiling imploringly. You kinda get the feeling that she's really lonely. 'Oh one thing before you go.' Turning you look to the woman and then quirk and eyebrow. 'I do hope you'll consider my request and decide to assist me with my research.  It is important.'  You nod and politely say you'll think about it.";
 			now Omiotalk is 1;
 		else:
 			LineBreak;
@@ -66,7 +66,7 @@ instead of conversing the Omio:
 			say "Stammering your thanks you let the warmth of the tea bask against your face -- from the smell you can tell that it's a mixture of peppermint and chamomile -- before happily downing the liquid. 'You're welcome and I do apologize for my seemingly odd behavior while back there with the centaur. I didn't mean to make you think I was some sort of freak or anything like that, although,' The redhead begins to chuckle somewhat to herself. 'Given what I do and where I am doing it, I may indeed be a bit a weird.' Sitting your now empty cup onto the floor you turn to ask the woman what she means.";
 			WaitLineBreak;
 			say "'Well, to be honest with you I'm a bit of a witch.' You blink and then look the other up and down while trying to imagine her as the stereotypical European styled spell caster and mystic. You just can't see it, but seeing your face taking on an inquisitive, if not confused, look Omio giggles and then shakes her head at you. 'Nonono! I'm not the black steeple crowned hat wearing, broomstick riding, black cat keeping witch that they like to play up on TV. I'm more of the medicine woman/holistic healer type[if intelligence of player < 16]. You nod in understanding to Omio. 'I'm so glad you understand what I'm talking about,' Omio chirps happily[else]. You can only laugh nervously as you have no idea what she's talking about. 'Hehe, it's fine. Not many people do in this [']modern['] day and age when over the counter medicines are so cheap and easy to get.' Omio seems rather disappointed, but hides it well[end if].";
-			say "You ask the redhead what she's doing out here and how she's remained unaffected by the virus running around[if hp of Doctor Matt > 7]. 'Do you know what's really going on around here?' Omio asks and you nod your head as you give her some details of Dr. Matt's findings. The redhead blinks and then narrows her eyes as she looks at you with a somewhat dire look on her face[else]. 'Do you know what's really going on around here?' You relay to Omio that it's just an out of control viral infection like the military says. The redhead shakes her head at you sadly[end if].";
+			say "You ask the redhead what she's doing out here and how she's remained unaffected by the virus running around[if HP of Doctor Matt > 7]. 'Do you know what's really going on around here?' Omio asks and you nod your head as you give her some details of Dr. Matt's findings. The redhead blinks and then narrows her eyes as she looks at you with a somewhat dire look on her face[else]. 'Do you know what's really going on around here?' You relay to Omio that it's just an out of control viral infection like the military says. The redhead shakes her head at you sadly[end if].";
 			WaitLineBreak;
 			say "'Well you see I know for a fact that some of the transformations happening to people around here are more than just random occurrences or chance happenings. Omio waves to her computer and you quickly flip your head over to look at the quietly humming machine before turning back to regard your hostess. 'Using that machine I've been able to narrow down the properties of the [']virus['] and have to the conclusion that people's minds are actually causing them to transform into different species based on certain... at the moment... unknown factors.";
 			say "'I'm hoping that with time I'll be able to analyze some of the more... unique properties of the virus and hand my research over to right people to give them a full heads up on just what they should come to expect in the next two to three months.' The look on Omio's face seems to speak of something both ominous and yet... prophetic at the same time. You ask the other what she means. 'Look, you have to understand, a lot of what they tell you on TV is only the tip of a much larger iceberg.' Omio gets up, after placing her tea on the floor, and then goes over to her table to rummage through her desk only to then pull out a strange looking book. Bringing the large tome over to sit in between the two of you, you find that what you are looking at is not a regular paperback.";
@@ -120,7 +120,7 @@ LastOmioteatime is a number that varies. LastOmioteatime is usually 777.
 [Omioteatime is a number that varies.][Does not compile]
 
 carry out Omioteatime:
-	if lastOmioteatime - turns is less than 6:
+	if lastOmioteatime - turns < 6:
 		say "'Sorry, but I'll have to ration the tea for now. Please come back a little later if you want another cup.' Omio bows slightly after saying this.";
 		stop the action;
 	now lastOmioteatime is turns;
@@ -182,9 +182,9 @@ West of Bedroom is MainRoom.
 
 Section 6 - Nightstand
 
-The description of Nightstand is "A small nightstand sits idly against the left side of the room. From the looks of the crafted wood the stand both looks and feels old… very old. Maybe you could try and [bold type]open[roman type] it?".
+The description of Nightstand is "A small nightstand sits idly against the left side of the room. From the looks of the crafted wood the stand both looks and feels old... very old. Maybe you could try and [bold type]open[roman type] it?".
 
-instead of  sniffing Nightstand:
+instead of sniffing Nightstand:
 	say "The nightstand smells old and somewhat musky."
 
 unlocknightstand is an action applying to nothing.
@@ -199,8 +199,8 @@ Check unlocknightstand:
 Carry out unlocknightstand:
 	say "Going over to pull open the topmost drawer of the nightstand you find that it is locked. Tugging on the handle does you little good as the drawer holds fast against your attempts to get into it. Grunting in disappointment you try to open the next drawer down, yet a unamused cough stops you from doing so seconds before your fingers can touch the second drawer's handle. Turning your head towards the door you look up to see Omio staring at you with a dark glower creasing her tanned face. Trying to laugh away your mortification at being caught you are you are not ready to receive a tea pot to the face.";
 	say "Falling back onto the hardwood of the floor you twitch in pain as a growing lump begins to rise on your head. 'And that's what you get for snooping through a girl's things!' Omio says before stomping off in a huff. Amazingly enough the tea pot rolls away after the redhead as if following Omio out the door, however, you're currently too dazed to take notice.";
-	decrease hp of player by 20;
-	if hp of player < 0, now hp of player is 1;
+	decrease HP of player by 20;
+	if HP of player < 0, now HP of player is 1;
 
 
 
@@ -268,7 +268,7 @@ Instead of Resolving a For the Future:
 	challenge "Centaur Stallion";
 	if lost is 0:
 		say "Driving off the hybrid human/horse you pant slightly from the exertion before turning worriedly to look at the woman you just [']saved[']. What you come to find is an unimpressed strawberry redhead glowering at you in disapproval. 'Thanks a lot, whoever you are, you just managed to ruin the first lucky break I had at trying to talk one of those asses.' The redhead sighs before shaking her head in mild frustration and you quickly begin to wonder if saving this broad was the right move to make.";
-		say "'Oh well,' the redheaded woman says as she lifts her face to look at you with the most stunning honey coloured eyes you've seen before smiling impishly at you. 'I can understand what you were trying to do so I suppose I should thank you.' You wait for a second to hear this verbal show of gratitude, but it never comes. You give the woman, who looks about to be somewhere in her mid-twenties, a slightly questioning look. 'What?!' She says hotly. 'I already said [italic type]thank you[roman type]. What more do you want?'";
+		say "'Oh well,' the redheaded woman says as she lifts her face to look at you with the most stunning honey coloured eyes you've seen before smiling impishly at you. 'I can understand what you were trying to do so I suppose I should thank you.' You wait for a second to hear this verbal show of gratitude, but it never comes. You give the woman, who looks about to be somewhere in her mid-twenties, a slightly questioning look. 'What?!' she says hotly. 'I already said [italic type]thank you[roman type]. What more do you want?'";
 		WaitLineBreak;
 		say "Realizing that you've got a real piece of work on your hands you turn in preparation to go about your way when a hand grabs your shoulder in an effort to stop you. 'Waitwaitwait. That came out wrong. I'm sorry.' You turn to watch as the redhead takes a step back and then flushes while twiddling her fingers together in front of her face. 'Let me try again. My name is Omio and I am very pleased that you helped to save me from the [']danger['] I was in. In a show of gratitude I would like to invite you over to my humble abode just over by the way for some tea.";
 		say "Omio takes a small bow after she finishes speaking and then lifts herself up to smile nervously at you. You sense that the woman is sincere about her apology, but something about her just seems off to you. You flippantly tell the redhead that you [italic type]might[roman type] come by later, if you find the time. 'That's fine. I live just over by the small pond just north of here.' Omio points to someplace you can't see, but you get the general feel for the direction as you squint slightly. 'Anytime you can come by would be fine. And again, thank you.'";
@@ -297,11 +297,11 @@ Instead of Resolving a For the Future:
 when play ends:
 	if omq > 2 and omq is not 100:
 		if humanity of player < 9:
-			say "Even though your mind is all but gone you do remember a ed female with golden eyes that you helped out before. Taking some time to go back to the plains in an effort to relocate the other you end up finding an abandoned house right where you were sure the  once lived. Sniffing the place and going inside to find no trace of anyone you leave without a second thought as you come to the conclusion that you must have imagined the entire thing.";
+			say "Even though your mind is all but gone you do remember a female with golden eyes that you helped out before. Taking some time to go back to the plains in an effort to relocate the other you end up finding an abandoned house right where you were sure the once lived. Sniffing the place and going inside to find no trace of anyone you leave without a second thought as you come to the conclusion that you must have imagined the entire thing.";
 		else:
 			say "After the military rolls into town you find yourself going back to Omio's studio to look for the redhead. What you find upon crossing the plains is an empty studio that looks as though it hadn't seen much use in maybe ten years? Odd since the garden outside seems as though it has been watered very recently. Not understanding this you search around the place, calling out for Omio as you do so, without much success in locating the .";
 			say "When you finally decide to give up almost thirty minutes later you stumble across something shining on the ground several steps away from the house. Kneeling down and picking up the thing you realize that you've found a mini GPS unit. Turning on the power of the little machine you blink in awe as a set of directions flash in front of your face with the destination name 'Prometheus Prison' glowing faintly above the coordinates.";
-			say "Could Omio have left this behind for you? And if so, what happened to the  to make her neutralize her presence here so efficiently?";
+			say "Could Omio have left this behind for you? And if so, what happened to her to make her neutralize her presence here so efficiently?";
 ]
 
 Researcher Studio ends here.

@@ -24,12 +24,12 @@ when play begins:
 	add { "Dryad" } to infections of hermaphrodite;
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 
 To say dryad defeat:
-	if libido of player > 25 and cocks of player is greater than 0:
+	if libido of player > 25 and cocks of player > 0:
 		say "     The dryad stagger back and stumbles into a tree.  Trapped between you and it, she moans weakly.  With her nude form on display, you can't help but run yours eyes over her lovely bosom, slender body and down to her syrupy pussy.  You find her quite tantalizing to look at and you're tempted to do much more than look.  Shall you try to have your way with her?";
 		if the player consents:
 			say "     You move closer to the dryad and thrust your [cock of player] cock into her.  Entry is deceptively easy and you start as you feel vines creeping along her inner walls.  You try to pull out but they grab hold and draw you all the way in.  The dryad murmurs, 'Silly mortal, thinking you could rape me.  Well, let me teach you a thing or two.'";
@@ -54,12 +54,12 @@ To say dryad attack:
 		say "You manage to collect some of the cum, placing it in an empty water bottle.";
 		increase carried of dryad cum by 1;
 		infect "Dryad";
-	if cocks of player is greater than 0 and cunts of player is 0:
+	if cocks of player > 0 and cunts of player is 0:
 		say "You collapse under the pain of your beating, and the dryad approaches. Suddenly, many green tendrils grow out of a hole above her clit that you had missed, twining around your cock and body and immobilizing you. ";
 		say "You watch as she strokes her clit, and stare as it grows into a 6 inch long wooden cock that she begins to stroke. You watch with growing lust and horror as it spasms, and white, thick, reeking spunk sprays all over your [bodydesc of player] body and face. She breathes out in a long sigh, and the tendrils bring you closer as she waits for the changes.";
 		repeat with n running from one to three:
 			infect "Dryad";
-		say "After you finish, she shoves one of her breasts into your face. 'still not had a drink, eh?', she quips as one of the green tendrils twining around her body squeezes the tit, milk spraying into your face and down your throat.";
+		say "After you finish, she shoves one of her breasts into your face. 'Still not had a drink, eh?' she quips as one of the green tendrils twining around her body squeezes the tit, milk spraying into your face and down your throat.";
 		infect "Dryad";
 		say "You collect the cum on you and place it into an empty water bottle. Maybe there is a use for it?";
 		increase carried of dryad cum by 1;
@@ -94,8 +94,8 @@ When Play begins:
 	now int entry is 16;
 	now cha entry is 20;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 45; 
-	now lev entry is 5; [ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ]
+	now HP entry is 45;
+	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you lose ]
 	now wdam entry is 13; [Amount of Damage monster Does when attacking.]
 	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -105,15 +105,15 @@ When Play begins:
 	now breast size entry is 4; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 10; [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4; [ Width of female sex  infection will try and give you ]
+	now cunt length entry is 10; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 4; [ Width of female sex infection will try and give you ]
 	now libido entry is 60; [ Amount player Libido will go up if defeated ]
-	now loot entry is "dryad cum"; 
+	now loot entry is "dryad cum";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]feminine[or]sultry[or]slender[at random]";
 	now type entry is "[one of]dryad[or]plant[at random]";
-	now magic entry is false; 
+	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
